@@ -1,0 +1,28 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&family=Nanum+Pen+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+// Imports
+
+@import 'variables';
+@import 'preloader';
+@import 'video';
+
+html {
+    scroll-behavior: smooth;
+  }
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $title2;
+  background: $background;
+  color: $dark-blue3;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}

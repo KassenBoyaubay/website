@@ -1,0 +1,15 @@
+.home {
+  background: gray;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tweet {
+  color: black;
+}
+
+.active {
+  opacity: 0;
+}

@@ -1,7 +1,8 @@
 import React from 'react'
-import './App.css'
+import 'App.css'
+import Nav from './components/Nav'
 import Tweets from './components/Tweets'
-import State from './components/State'
+import State from '../../../React/dev_ed_react_state_and_props/src/components/State'
 
 const App = () => {
   const name = 'Kas'
