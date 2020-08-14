@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'App.css'
+import Nav from './components/Nav'
+import Tweets from './components/Tweets'
+import State from '../../../React/dev_ed_react_state_and_props/src/components/State'
 
-function App() {
+const App = () => {
+  const name = 'Kas'
+  const age = 26
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello React</h1>
+      <div className="home">
+        <Tweets me={name} age={age} />
+      </div>
+      <State />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
