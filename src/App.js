@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import './App.css'
+import AppStyledComponent from './AppStyledComponent'
+
 import Tweets from './components/Tweets'
 import State from './components/State'
-
-import { Link } from 'react-router-dom'
 
 const App = () => {
   const name = 'Kas'
@@ -19,6 +21,12 @@ const App = () => {
         <State />
         <Link to="/animatedWebsite"><button>Animated Website</button></Link>
       </div>
+      <AppStyledComponent color="blue" size="large">
+        Blue
+      </AppStyledComponent >
+      <AppStyledComponent color="green" size="small" noBorder>
+        Green
+      </AppStyledComponent >
     </div >
   )
 }

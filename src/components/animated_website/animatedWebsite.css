@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 
-.hero {
+.aw-hero {
     width: 100%;
     height: 100vh;
     background-image: url(images/background.png);
@@ -14,12 +14,12 @@
     overflow: hidden;
 }
 
-.logo {
+.aw-logo {
     width: 100px;
     cursor: pointer;
 }
 
-.navbar {
+.aw-navbar {
     width: 85%;
     height: 15%;
     margin: auto;
@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 
-button {
+button.aw {
     color: #fbfcfd;
     padding: 10px 25px;
     background: transparent;
@@ -38,7 +38,7 @@ button {
     cursor: pointer;
 }
 
-.content {
+.aw-content {
     color: #fbfcfd;
     position: absolute;
     top: 50%;
@@ -53,7 +53,7 @@ h1 {
     line-height: 80px;
 }
 
-.side-bar {
+.aw-side-bar {
     width: 50px;
     height: 100vh;
     background: linear-gradient(#00545d, #000729);
@@ -62,21 +62,21 @@ h1 {
     top: 0;
 }
 
-.menu {
+.aw-menu {
     display: block;
     width: 25px;
     margin: 40px auto 0;
     cursor: pointer;
 }
 
-.social-links img,
-.useful-links img {
+.aw-social-links img,
+.aw-useful-links img {
     width: 35px;
     margin: 5px auto;
     cursor: pointer;
 }
 
-.social-links {
+.aw-social-links {
     width: 50px;
     text-align: center;
     position: absolute;
@@ -86,7 +86,7 @@ h1 {
     flex-direction: column;
 }
 
-.useful-links {
+.aw-useful-links {
     width: 50px;
     text-align: center;
     position: absolute;
