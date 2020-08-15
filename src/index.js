@@ -1,8 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+// Bootstrap
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-//import AnimatedWebsite from './components/animated_website/animatedWebsite'
+// App
+import App from './App'
+// Animated Website
+import AnimatedWebsite from './components/animated_website/animatedWebsite'
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+ReactDOM.render(
+    <BrowserRouter>
+        <Switch>
+            <Route exact path="/" component={App} />
+            <Route path="/animatedWebsite" component={AnimatedWebsite} />
+        </Switch>
+    </BrowserRouter>
+    , document.querySelector('#root'))
