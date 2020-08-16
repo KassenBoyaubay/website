@@ -1,4 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+// Jquery Library file 
+// import $ from "./js/Jquery3.4.1.min.js"
+import $ from 'jquery'
+// --------- Owl-Carousel js ----------------- 
+// import owlCarousel from "./js/owl.carousel.min.js"
+import OwlCarousel from 'react-owl-carousel'
+import 'owl.carousel/dist/assets/owl.carousel.min.css';
+import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+// --------- AOS js Library  ----------------- 
+// import AOS from "./js/aos.js"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+// import main from "./js/main.js"
 
 // Font Awesome Icons
 import './css/all.css'
@@ -10,10 +24,69 @@ import './css/aos.css'
 // Custom Style
 import './css/Style.css'
 
-// Images
-//import img_logo from './images/logo.png'
+const Blogger = () => {
+    useEffect(() => {
+        /*
+        const scripts = (url) => {
+            let script = document.createElement("script");
+            script.async = false;
+            script.type = 'text/jsx';
+            script.src = url;
+            document.body.appendChild(script);
+        }
+        // Custom Javascript file 
+        scripts("./js/main.js");
+        */
 
-const blogger = () => {
+        // main();
+
+        const responsive = {
+            0: {
+                items: 1
+            },
+            320: {
+                items: 1
+            },
+            560: {
+                items: 2
+            },
+            960: {
+                items: 3
+            }
+        }
+
+
+        let $nav = $('.nav');
+        let $toggleCollapse = $('.toggle-collapse');
+
+        /** click event on toggle menu */
+        $toggleCollapse.click(function () {
+            $nav.toggleClass('collapse');
+        })
+
+        // owl-crousel for blog
+        // $('.owl-carousel').owlCarousel({
+        //     loop: true,
+        //     autoplay: false,
+        //     autoplayTimeout: 3000,
+        //     dots: false,
+        //     nav: true,
+        //     navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
+        //     responsive: responsive
+        // });
+
+
+        // click to scroll top
+        $('.move-up span').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+        })
+
+        // AOS Instance
+        AOS.init();
+
+    })
 
     return (
         <div className=".body">
@@ -81,7 +154,15 @@ const blogger = () => {
                 <section>
                     <div className="blog">
                         <div className="container">
-                            <div className="owl-carousel owl-theme blog-post">
+                            <OwlCarousel className="owl-carousel owl-theme blog-post"
+                                loop
+                                autoplay={false}
+                                autoplayTimeout={3000}
+                                dots={false}
+                                nav
+                                navText={[<i className="fas fa-long-arrow-alt-left"></i>, <i className="fas fa-long-arrow-alt-right"></i>]}
+                                responsive
+                            >
                                 <div className="blog-content" data-aos="fade-right" data-aos-delay="200">
                                     <img src="./assets/Blog-post/post-1.jpg" alt="post-1" />
                                     <div className="blog-title">
@@ -114,7 +195,7 @@ const blogger = () => {
                                         <span>2 minutes</span>
                                     </div>
                                 </div>
-                            </div>
+                            </OwlCarousel>
                             <div className="owl-navigation">
                                 <span className="owl-nav-prev"><i className="fas fa-long-arrow-alt-left"></i></span>
                                 <span className="owl-nav-next"><i className="fas fa-long-arrow-alt-right"></i></span>
@@ -415,17 +496,8 @@ const blogger = () => {
             </footer>
 
             {/* -------------x------------- Footer --------------------x------------------- */}
-
-            {/* Jquery Library file */}
-            <script type="text/javascript" src='./js/Jquery3.4.1.min.js' />
-            {/* --------- Owl-Carousel js ----------------- */}
-            <script type="text/javascript" src='./js/owl.carousel.min.js' />
-            {/* --------- AOS js Library  ----------------- */}
-            <script type="text/javascript" src='./js/Jquery3.4.1.min.js' />
-            {/* Custom Javascript file */}
-            <script type="text/javascript" src='./js/main.js' />
         </div>
     )
 }
 
-export default blogger
+export default Blogger

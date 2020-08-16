@@ -17,9 +17,11 @@ const App = () => {
       <div className="home">
         <Tweets me={name} age={age} />
       </div>
-      <div style={{ backgroundColor: 'black' }}>
+      <div style={{ backgroundColor: 'black', display: 'flex', flexDirection: 'column' }}>
         <State />
+        <br />
         <Link to="/animatedWebsite"><button>Animated Website</button></Link>
+        <a href="./Blogger/Index.html"><button>Blogger</button></a>
       </div>
       <AppStyledComponent color="blue" size="large">
         Blue
