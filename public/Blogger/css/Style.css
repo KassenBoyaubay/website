@@ -1,12 +1,5 @@
 @import url("../css/fonts.css");
 
-html,
-body {
-  margin: 0%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 :root {
   /*      Theme colors        */
   --text-gray: #3f4954;
@@ -14,9 +7,14 @@ body {
   --bg-color: #0f0f0f;
   --white: #ffffff;
   --midnight: #104f55;
+  --bg-white: #f1f5f8;
 
   /* gradient color   */
   --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --red: linear-gradient(to right, #dd2476, #ff512f);
+  --alt: #ff512f;
+  --bg: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(180,13,134,1) 100%);
+  --bg-body: linear-gradient(180deg, #c2e9fb 0%, #f1f5f8 100%);
 
   /*      theme font-family   */
   --Abel: "Abel", cursive;
@@ -24,6 +22,14 @@ body {
   --Josefin: "Josefin", cursive;
   --Lexend: "Lexend", cursive;
   --Livvic: "Livvic", cursive;
+}
+
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: var(--bg-body);
 }
 
 /* ---------------- Global Classes ---------------*/
@@ -88,16 +94,19 @@ p {
 /* --------------- navbar ----------------- */
 
 .nav {
-  background: white;
-  padding: 0 2rem;
-  height: 0rem;
-  min-height: 10vh;
+  /* height: 0rem;
+  min-height: 10vh;  */
+  padding: 0.5rem 0;
+  background: var(--sky);
   overflow: hidden;
   transition: height 1s ease-in-out;
 }
 
 .nav .nav-menu {
   justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: var(--sky);
 }
 
 .nav .toggle-collapse {
@@ -120,7 +129,7 @@ p {
 }
 
 .collapse {
-  height: 30rem;
+  height: 4.5rem;
 }
 
 .nav .nav-items {
@@ -133,7 +142,7 @@ p {
   font-size: 1.1rem;
   position: relative;
   font-family: var(--Abel);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .nav .nav-items .nav-link:hover {
@@ -144,20 +153,26 @@ p {
   color: var(--white);
 }
 
+.nav .nav-brand {
+  display: flex;
+  align-items: center;
+}
+
 .nav .nav-brand a {
   font-size: 1.6rem;
   padding: 1rem 0;
   display: block;
   font-family: var(--Lexend);
-  font-size: 1.6rem;
+  border-bottom: solid 2px var(--midnight);
 }
 
 .nav .social {
   padding: 1.4rem 0;
+  font-size: 1.3rem;
 }
 
 .nav .social i {
-  padding: 0 0.2rem;
+  padding: 0 0.5rem;
 }
 
 .nav .social i:hover {
@@ -190,7 +205,8 @@ h3 {
 
 main .site-title .btn {
   margin: 1.8rem;
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
 }
 
 main .site-title .btn:hover {
@@ -231,7 +247,8 @@ main .blog-content .blog-title {
 
 main .blog-content .btn-blog {
   padding: 0.7rem 2rem;
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
   margin: 0.5rem;
 }
 
@@ -255,11 +272,14 @@ section .container .owl-nav {
 
 .owl-theme .owl-nav [class*="owl-"]:hover {
   background: transparent;
-  color: var(--midnight);
+  color: var(--alt);
+  transition: color 0.2s ease-out;
 }
 
 .owl-theme .owl-nav [class*="owl-"] {
   outline: none;
+  font-size: 3rem;
+  transition: color 0.2s ease-in;
 }
 
 /* -------x------- Blog Carousel -----x------ */
@@ -282,7 +302,8 @@ main .site-content .post-content > .post-image,
 }
 
 main .site-content .post-content > .post-image .post-info {
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
   padding: 1rem;
   position: absolute;
   bottom: 0%;
@@ -315,7 +336,8 @@ main .post-content .post-title a {
 .site-content .post-content .post-title .post-btn {
   border-radius: 0;
   padding: 0.7rem 1.5rem;
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
 }
 
 .site-content .pagination {
@@ -345,7 +367,8 @@ main .post-content .post-title a {
 }
 
 .site-content > .sidebar .category-list .list-items {
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
   padding: 0.4rem 1rem;
   margin: 0.8rem 0;
   border-radius: 3rem;
@@ -398,7 +421,8 @@ main .post-content .post-title a {
   border-radius: 0;
   padding: 0.8rem 32%;
   margin: 1rem 0;
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
 }
 
 .site-content .sidebar .popular-tags {
@@ -406,7 +430,8 @@ main .post-content .post-title a {
 }
 
 .site-content .sidebar .popular-tags .tags .tag {
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
   padding: 0.4rem 1rem;
   border-radius: 3rem;
   margin: 0.4rem 0.6rem;
@@ -455,7 +480,8 @@ footer.footer .newsletter .form-element input {
 }
 
 footer.footer .newsletter .form-element span {
-  background: var(--sky);
+  background: var(--alt);
+  background: var(--red);
   padding: 0.5rem 0.7rem;
   cursor: pointer;
 }
@@ -524,6 +550,8 @@ footer.footer .move-up span:hover {
   .nav .nav-menu,
   .nav .nav-items {
     flex-direction: column;
+    text-align: center;
+    padding: 0;
   }
 
   .nav .toggle-collapse {
