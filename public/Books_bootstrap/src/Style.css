@@ -366,3 +366,12 @@ footer .column i + i {
   z-index: 9999;
   transition: all 1.5s ease;
 }
+
+@media screen and (max-width: 992px) {
+   header .nav-item {
+    text-align: center;
+  }
+  header .nav-item:last-child {
+    padding: 0.9em;
+  }
+}

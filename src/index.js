@@ -9,12 +9,15 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import App from './App'
 // Animated Website
 import AnimatedWebsite from './components/animated_website/animatedWebsite'
+// Bootstrap Template
+import BootstrapTemplate from './components/bootstrap_template/bootstrapTemplate'
 
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={App} />
             <Route path="/animatedWebsite" component={AnimatedWebsite} />
+            <Route path="/bootstrapTemplate" component={BootstrapTemplate} />
         </Switch>
     </BrowserRouter>
     , document.querySelector('#root'))

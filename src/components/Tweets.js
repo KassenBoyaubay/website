@@ -13,9 +13,9 @@ const Tweets = (props) => {
             <h2>Tweet is</h2>
             <Tweet me={props.me} age={props.age} />
             {tweets.map((tweet, key) => (
-                <div className="tweet">
+                <div className="tweet" key={key}>
                     <h2>Name and Tweet:</h2>
-                    <Tweet key={key} name={tweet.name} tweet={tweet.tweet} />
+                    <Tweet name={tweet.name} tweet={tweet.tweet} />
                 </div>
             ))}
         </section>
