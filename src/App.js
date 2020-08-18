@@ -49,6 +49,7 @@ const App = () => {
         <br />
         <Link to="/animatedWebsite"><button>Animated Website</button></Link>
         <Link to="/bootstrapTemplate"><button>Bootstrap Template</button></Link>
+        <Link to="/bootstrapPortfolio"><button>Bootstrap Portfolio</button></Link>
         <a href="./Blogger/Index.html"><button>Blogger</button></a>
         <a href="./Books_bootstrap/src/Index.html"><button>Books bootstrap</button></a>
       </div>
