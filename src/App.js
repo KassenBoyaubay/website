@@ -8,6 +8,7 @@ import AppStyledComponent from './AppStyledComponent'
 import Tweets from './components/Tweets'
 import State from './components/State'
 import ButtonNeon from './components/button_neon_light/buttonNeon'
+import ClockDigital from './components/clock_digital/clockDigital'
 
 const App = () => {
   const name = 'Kas'
@@ -58,6 +59,10 @@ const App = () => {
       <div style={buttonNeonContainer}>
         <ButtonNeon name={'Neon Button'} />
       </div>
+      <br />
+      <h2>Digital Clock</h2>
+      <ClockDigital />
+      <br />
       <div className="home">
         <Tweets me={name} age={age} />
       </div>

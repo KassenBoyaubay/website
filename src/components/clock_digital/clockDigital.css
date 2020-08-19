@@ -1,0 +1,40 @@
+.digitalClock {
+  background-color: #ccc;
+  width: 400px;
+  height: 175px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 2%;
+  position: relative;
+}
+
+.digitalClock .badge {
+  background-color: #e66357;
+  color: white;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+  border-radius: 2%;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  top: -25px;
+}
+
+.digitalClock .clock {
+  background-color: #ebebeb;
+  text-align: center;
+  font-size: 55px;
+  padding: 20px;
+  border-radius: 2%;
+  display: flex;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+.digitalClock #hours,
+.digitalClock #minutes,
+.digitalClock #seconds {
+  width: 90px;
+  display: inline-block;
+}
