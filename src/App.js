@@ -7,6 +7,7 @@ import AppStyledComponent from './AppStyledComponent'
 
 import Tweets from './components/Tweets'
 import State from './components/State'
+import ButtonNeon from './components/button_neon_light/buttonNeon'
 
 const App = () => {
   const name = 'Kas'
@@ -38,9 +39,25 @@ const App = () => {
       .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] }))
   */
 
+  const buttonNeonContainer = {
+    margin: '0',
+    padding: '0',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '10vh',
+    background: '#031321',
+    fontFamily: 'consolas'
+  }
+
   return (
     <div className="App">
       <h1>Hell<span><i className="fa fa-spinner fa-spin"></i></span> React </h1>
+      <br />
+      <h2>Neon Button Light</h2>
+      <div style={buttonNeonContainer}>
+        <ButtonNeon name={'Neon Button'} />
+      </div>
       <div className="home">
         <Tweets me={name} age={age} />
       </div>
