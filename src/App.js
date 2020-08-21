@@ -11,6 +11,7 @@ import ButtonNeon from "./components/button_neon_light/buttonNeon";
 import ClockDigital from "./components/clock_digital/clockDigital";
 import ClockNeumorphism from "./components/clock_neumorphism/clockNeumorphism";
 import ToggleMode from "./components/dark_light_toggle_mode/toggleMode";
+import FlexGallery from "./components/flex_gallery/flexGallery";
 
 const App = () => {
   const name = "Kas";
@@ -88,6 +89,9 @@ const App = () => {
       <br />
       <h2>Dark Light Toggle Mode</h2>
       <ToggleMode />
+      <br />
+      <h2>Flex Gallery</h2>
+      <FlexGallery />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
