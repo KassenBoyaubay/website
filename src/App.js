@@ -9,6 +9,7 @@ import Tweets from './components/Tweets'
 import State from './components/State'
 import ButtonNeon from './components/button_neon_light/buttonNeon'
 import ClockDigital from './components/clock_digital/clockDigital'
+import ClockNeumorphism from './components/clock_neumorphism/clockNeumorphism'
 
 const App = () => {
   const name = 'Kas'
@@ -51,6 +52,14 @@ const App = () => {
     fontFamily: 'consolas'
   }
 
+  const clockNeumorphismContainer = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '40vh',
+    background: '#091921'
+  }
+
   return (
     <div className="App">
       <h1>Hell<span><i className="fa fa-spinner fa-spin"></i></span> React </h1>
@@ -63,8 +72,14 @@ const App = () => {
       <h2>Digital Clock</h2>
       <ClockDigital />
       <br />
-      <div className="home">
+      <h2>Clock Neumorphism</h2>
+      <div style={clockNeumorphismContainer}>
+        <ClockNeumorphism />
+        <br />
+      </div>
+      <div className="home" style={{ display: 'flex' }}>
         <Tweets me={name} age={age} />
+        <Tweets me='NotKas' age='30' />
       </div>
       <div style={{ backgroundColor: 'black', display: 'flex', flexDirection: 'column' }}>
         <State />
@@ -72,6 +87,7 @@ const App = () => {
         <Link to="/animatedWebsite"><button>Animated Website</button></Link>
         <Link to="/bootstrapTemplate"><button>Bootstrap Template</button></Link>
         <Link to="/bootstrapPortfolio"><button>Bootstrap Portfolio</button></Link>
+        <Link to="/contactForm"><button>Contact Form</button></Link>
         <a href="./Blogger/Index.html"><button>Blogger</button></a>
         <a href="./Books_bootstrap/src/Index.html"><button>Books bootstrap</button></a>
       </div>

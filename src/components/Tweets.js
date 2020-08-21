@@ -7,11 +7,16 @@ const Tweets = (props) => {
         { name: 'traversy', tweet: 'Whats\'app I need a breal' },
         { name: 'simplify', tweet: 'I\'m simplifyingg the web!!' },
     ]
+
+    const classes = []
+
+    if (props.name === 'Kas') classes.push('KasClass')
+
     return (
         <section>
             <h1>I have {tweets.length} tweets</h1>
             <h2>Tweet is</h2>
-            <Tweet me={props.me} age={props.age} />
+            <Tweet me={props.me} age={props.age} className={classes.join(' ')} />
             {tweets.map((tweet, key) => (
                 <div className="tweet" key={key}>
                     <h2>Name and Tweet:</h2>

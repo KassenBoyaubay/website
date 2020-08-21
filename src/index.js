@@ -13,6 +13,8 @@ import AnimatedWebsite from './components/animated_website/animatedWebsite'
 import BootstrapTemplate from './components/bootstrap_template/bootstrapTemplate'
 // Bootstrap Portfolio
 import BootstrapPortfolio from './components/bootstrap_portfolio/bootstrapPortfolio'
+// Contact Form
+import ContactForm from './components/contact_form/contactForm'
 
 ReactDOM.render(
     <BrowserRouter>
@@ -21,6 +23,7 @@ ReactDOM.render(
             <Route path="/animatedWebsite" component={AnimatedWebsite} />
             <Route path="/bootstrapTemplate" component={BootstrapTemplate} />
             <Route path="/bootstrapPortfolio" component={BootstrapPortfolio} />
+            <Route path="/contactForm" component={ContactForm} />
         </Switch>
     </BrowserRouter>
     , document.querySelector('#root'))

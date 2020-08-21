@@ -1,0 +1,1 @@
+[React JS. Полный Курс 2020 (Вся Теория Включена!)](https://www.youtube.com/watch?v=xJZa2_aldDs&list=PLlBzNJv1tsht93h2D6Y1Vt0pQgYbmT4S1&index=23&t=2s)
