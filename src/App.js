@@ -123,6 +123,15 @@ const App = () => {
         <a href="./Books_bootstrap/src/Index.html">
           <button>Books bootstrap</button>
         </a>
+        <a href="./Travelville/index.html">
+          <button>Travelville</button>
+        </a>
+        <a href="./Plitkade/index.html">
+          <button>Plitkade</button>
+        </a>
+        <a href="./Portfolio_1/index.html">
+          <button>Portfolio_1</button>
+        </a>
       </div>
       <AppStyledComponent color="blue" size="large">
         Blue
