@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X_UA_Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+
+<body>
+    <section>
+        <!-- navigation -->
+        <nav>
+            <!-- logo -->
+            <a href="#" class="logo">G T Internet</a>
+            <!-- menu -->
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Team</a></li>
+            </ul>
+            <!-- bars -->
+            <div class="toggle"></div>
+        </nav>
+        <!-- text -->
+        <div class="text-container">
+            <p>Hello,</p>
+            <p>I'M TOUSEQ</p>
+            <p>I am Software Engineer <br>& Designer</p>
+            <button class="hire-btn">Hire me</button>
+            <button class="down-cv">Download CV</button>
+        </div>
+        <!-- model -->
+        <img src="images/model.png" alt="model" class="model">
+    </section>
+    <!-- about-section -->
+    <div class="about-container">
+        <!-- img -->
+        <img src="images/about-img.png" alt="">
+        <!-- about-text -->
+        <div class="about-text">
+            <p>About Me</p>
+            <p>Developer & Designer</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa amet voluptatibus nesciunt, quisquam
+                sapiente expedita suscipit in eos? Architecto voluptates expedita, nobis molestias placeat eaque odio?
+                Ipsa magni tempora minus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nostrum sed distinctio excepturi aperiam
+                at sapiente. Esse, similique veritatis quibusdam porro, sed dignissimos ipsum facilis sint voluptatibus
+                ducimus optio sapiente?</p>
+            <!-- button -->
+            <button>Hire Me</button>
+            <button>Download CV</button>
+        </div>
+    </div>
+    <!-- services -->
+    <div class="services">
+        <!-- text -->
+        <div class="services-text">
+            <p>Services</p>
+            <p>Services required</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda rerum, alias vel veritatis similique
+                numquam laboriosam obcaecati blanditiis quos minima cum iste quia, aliquid mollitia perspiciatis?
+                Provident necessitatibus ea facere?</p>
+        </div>
+        <!-- box -->
+        <div class="box-container">
+            <!-- 1 -->
+            <div class="box-1">
+                <span>1</span>
+                <p clas="heading">Web Design</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore nam corporis
+                    dolorem officiis iusto nobis voluptas dolor, doloremque beatae minus iste commodi obcaecati modi
+                    suscipit voluptatum reprehenderit ab. Libero.</p>
+                <button>Read More</button>
+            </div>
+            <!-- 2 -->
+            <div class="box-2">
+                <span>2</span>
+                <p clas="heading">Web Development</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore nam corporis
+                    dolorem officiis iusto nobis voluptas dolor, doloremque beatae minus iste commodi obcaecati modi
+                    suscipit voluptatum reprehenderit ab. Libero.</p>
+                <button>Read More</button>
+            </div>
+            <!-- 3 -->
+            <div class="box-3">
+                <span>3</span>
+                <p clas="heading">Security/SEO</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore nam corporis
+                    dolorem officiis iusto nobis voluptas dolor, doloremque beatae minus iste commodi obcaecati modi
+                    suscipit voluptatum reprehenderit ab. Libero.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+    </div>
+    <!-- contact  me -->
+    <div class="contact-me">
+        <p>If You Have Any Project In Your Mind.</p>
+        <button>Contact Me</button>
+    </div>
+    <!-- footer -->
+    <footer>
+        <p>Kas B</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nobis nesciunt id vero dolores
+            reiciendis </p>
+        <!-- social -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <!-- copyright -->
+        <p class="copyright">Cipyright by Kas</p>
+    </footer>
+    <!-- attached social bar -->
+    <div class="a-social-b">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <script type="text/javascript" src="js/JQuery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.toggle').click(function () {
+                $('.toggle').toggleClass('active');
+                $('nav').toggleClass('active');
+            })
+        })
+    </script>
+</body>
+
+</html>
