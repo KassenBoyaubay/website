@@ -36,7 +36,7 @@ const ToggleMode = () => {
             checked={checked}
             onChange={() => checkbox()}
           />
-          <label for="switch">Toggle</label>
+          <label htmlFor="switch">Toggle</label>
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae

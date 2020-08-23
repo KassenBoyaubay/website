@@ -12,6 +12,8 @@ import ClockDigital from "./components/clock_digital/clockDigital";
 import ClockNeumorphism from "./components/clock_neumorphism/clockNeumorphism";
 import ToggleMode from "./components/dark_light_toggle_mode/toggleMode";
 import FlexGallery from "./components/flex_gallery/flexGallery";
+import RealPhone from "./components/real_phone/realPhone";
+import SignForm from "./components/sign_form/signForm";
 
 const App = () => {
   const name = "Kas";
@@ -63,6 +65,16 @@ const App = () => {
     background: "#091921",
   };
 
+  const signFormContainer = {
+    background: "#f6f5f7",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    fontFamily: ["Montserrat", "sans-serif"],
+    height: "80vh",
+  };
+
   return (
     <div className="App">
       <h1>
@@ -92,6 +104,14 @@ const App = () => {
       <br />
       <h2>Flex Gallery</h2>
       <FlexGallery />
+      <br />
+      <h2>Real Phone</h2>
+      <RealPhone />
+      <br />
+      <h2>Sign in/out Form</h2>
+      <div style={signFormContainer}>
+        <SignForm />
+      </div>
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
