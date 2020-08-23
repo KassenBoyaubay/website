@@ -14,6 +14,7 @@ import ToggleMode from "./components/dark_light_toggle_mode/toggleMode";
 import FlexGallery from "./components/flex_gallery/flexGallery";
 import RealPhone from "./components/real_phone/realPhone";
 import SignForm from "./components/sign_form/signForm";
+import SkewedBorderBox from "./components/skewed_border_box/skewedBorderBox";
 
 const App = () => {
   const name = "Kas";
@@ -75,6 +76,11 @@ const App = () => {
     height: "80vh",
   };
 
+  const skewedBorderBoxContainer = {
+    minHeight: "100vh",
+    background: "#060c21",
+  };
+
   return (
     <div className="App">
       <h1>
@@ -111,6 +117,11 @@ const App = () => {
       <h2>Sign in/out Form</h2>
       <div style={signFormContainer}>
         <SignForm />
+      </div>
+      <br />
+      <h2>Skewed Border Box Border Hover Effect</h2>
+      <div style={skewedBorderBoxContainer}>
+        <SkewedBorderBox />
       </div>
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
