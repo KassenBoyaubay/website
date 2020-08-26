@@ -152,6 +152,12 @@ const App = () => {
         <Link to="/contactForm">
           <button>Contact Form</button>
         </Link>
+        <Link to="/SVGBubbles_example">
+          <button>SVG Bubbles example</button>
+        </Link>
+        <Link to="/SVG_example">
+          <button>SVG example</button>
+        </Link>
         <a href="./Blogger/Index.html">
           <button>Blogger</button>
         </a>

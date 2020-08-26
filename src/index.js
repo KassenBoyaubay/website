@@ -15,6 +15,10 @@ import BootstrapTemplate from "./components/bootstrap_template/bootstrapTemplate
 import BootstrapPortfolio from "./components/bootstrap_portfolio/bootstrapPortfolio";
 // Contact Form
 import ContactForm from "./components/contact_form/contactForm";
+// SVG Bubbles example
+import SVGBubbles_example from "./components/SVG_section_dividers_1/SVGBubbles_example";
+// SVG examples
+import SVG_example from "./components/SVG_section_divider_2/SVG_example";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -24,6 +28,8 @@ ReactDOM.render(
       <Route path="/bootstrapTemplate" component={BootstrapTemplate} />
       <Route path="/bootstrapPortfolio" component={BootstrapPortfolio} />
       <Route path="/contactForm" component={ContactForm} />
+      <Route path="/SVGBubbles_example" component={SVGBubbles_example} />
+      <Route path="/SVG_example" component={SVG_example} />
     </Switch>
   </BrowserRouter>,
   document.querySelector("#root")
