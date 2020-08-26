@@ -15,6 +15,7 @@ import FlexGallery from "./components/flex_gallery/flexGallery";
 import RealPhone from "./components/real_phone/realPhone";
 import SignForm from "./components/sign_form/signForm";
 import SkewedBorderBox from "./components/skewed_border_box/skewedBorderBox";
+import StatsCard from "./components/stats_card/statsCard";
 
 const App = () => {
   const name = "Kas";
@@ -123,6 +124,9 @@ const App = () => {
       <div style={skewedBorderBoxContainer}>
         <SkewedBorderBox />
       </div>
+      <br />
+      <h2>Stats Card</h2>
+      <StatsCard />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
