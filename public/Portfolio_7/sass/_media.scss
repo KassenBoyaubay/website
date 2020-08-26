@@ -1,0 +1,147 @@
+// Media Queries
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 90%;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    section {
+        &.profile {
+            flex-direction: column;
+            align-items: flex-start;
+            clip-path: none;
+
+            left {
+                margin-bottom: 2rem;
+            }
+
+            .right {
+                align-self: flex-end;
+            }
+        }
+
+        &.work {
+            .wrapper {
+                display: block;
+            
+                .slider__wrapper {
+                    margin-bottom: 8rem;
+                }
+            }
+        }
+
+        &.partners {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    section {
+        &.skills {
+            .content {
+                display: block;
+
+                .left {
+                    margin-bottom: 6rem;
+                }
+            }
+        }
+
+        &.partners {
+            .brands__wrapper {
+                flex-wrap: wrap;
+
+                img {
+                    margin-bottom: 2rem
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        &.about {
+            .content {
+                display: block;
+
+                .left {
+                    margin-bottom: 6rem;
+                }
+            }
+        }
+
+        &.contact {
+            .wrapper {
+                display: block;
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &.counter__section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            & > div {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        &.profile {
+            align-items: center;
+
+            .right {
+                align-self: center;
+            }
+
+            .left {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &.work {
+            .wrapper {
+                .portfolio {
+                    .tabs {
+                        ul {
+                            flex-wrap: wrap;
+
+                            li {
+                                margin-bottom: 4rem;
+                            }
+                        }
+                    }
+
+                    .portfolio__wrapper {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        &.contact {
+            .wrapper {
+                .right {
+                    .form__group {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+}

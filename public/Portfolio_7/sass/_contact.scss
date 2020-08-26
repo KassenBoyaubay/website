@@ -1,0 +1,120 @@
+// Contact
+
+
+@mixin input() {
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid $dark-blue;
+    color: $ternary;
+    font-size: 16px;
+
+    &:focus {
+        border-color: $secondary;
+        outline: none;
+    }
+}
+
+section {
+    &.contact {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 60px;
+            margin-top: 40px;
+            align-items: center;
+
+            .left {
+                color: $ternary;
+
+                & > div {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 40px;
+
+                    div:nth-child(1) {
+                        margin-right: 10px;
+                    }
+                }
+
+                i {
+                    font-size: 30px;
+                    color: $info;
+                }
+
+                h4 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 5px;
+
+                    & + span {
+                        font-weight: 100;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .right {
+                .form__group {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 30px;
+                    align-items: center;
+                    margin-bottom: 14px;
+
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+
+                        label {
+                            color: $ternary;
+                            margin-bottom: 8px;
+                        }
+
+                        input {
+                            @include input();
+                        }
+                    }
+
+                    &.textarea__wrapper {
+                        display: block;
+                        width: 100%;
+                        
+                        textarea {
+                            @include input();
+                        }
+                    }
+                }
+
+                button {
+                    background: $info;
+                    border: none;
+                    padding: 1rem 2rem;
+                    color: $pure;
+                    font-size: 14px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        background: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin input() {
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid $dark-blue;
+    color: $ternary;
+    font-size: 16px;
+
+    &:focus {
+        border-color: $secondary;
+        outline: none;
+    }
+}

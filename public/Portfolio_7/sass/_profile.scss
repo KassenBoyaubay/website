@@ -1,0 +1,116 @@
+// Profile
+
+section {
+    &.profile {
+        background: $black;
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        margin-top: 60px;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+        padding-bottom: 4rem;
+ 
+        .left {
+            flex: 2;
+            display: flex;
+            align-items: center;
+ 
+            h2 {
+                color: $fade;
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: $mild;
+                font-size: 14px;
+
+                b {
+                    padding-bottom: 1rem;
+                    font-weight: 400;
+                }
+            }
+
+            .cd-headline.loading-bar .cd-words-wrapper::after {
+                background: linear-gradient(to right, $secondary, $success);
+            }
+
+            img {
+                width: 128px;
+                height: 128px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .avatar__block {
+                position: relative;
+                margin-right: 2rem;
+
+                span {
+                    position: absolute;
+                    right: 4px;
+                    bottom: 4px;
+                    background: $info;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $pure;
+                    box-shadow: 0px 0px 20px 0px rgba(32, 41, 54, 0.05);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+
+            ul {
+                &.contact {
+                    list-style-type: none;
+                    margin-bottom: 1.6rem;
+
+                    li {
+                        color: $ternary;
+                        margin-bottom: .7rem;
+                        font-size: 14px;
+
+                        i {
+                            font-size: 18px;
+                            margin-right: .3rem;
+                        }
+                    }
+                }
+
+                &.socials {
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+
+                    li {
+                        margin-right: 0.8rem;
+
+                        a {
+                            display: inline-block;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            color: $pure;
+                            line-height: 36px;
+                            text-align: center;
+                        }
+
+                        @each $key, $color in (1: $secondary, 2: $twitter, 3: $dribbble) {
+                            &:nth-child(#{$key}) a { 
+                                background: $color;
+                            }
+                          }
+                    }
+                }
+            }
+        }
+    }
+}

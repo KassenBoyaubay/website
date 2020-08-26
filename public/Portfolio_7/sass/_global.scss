@@ -1,0 +1,71 @@
+/* Colors */
+
+$primary: #1a253f;
+$dark: #151A33;
+$secondary: #2b55cc;
+$info: #4d79f6;
+$ternary: #848db3;
+$pure: #eff2f9;
+$fade: #7081b9;
+$mild: #8997bd;
+$footer: #212A4A;
+$black: #060b1b;
+$twitter: #4ac7ec;
+$dribbble: #ff5da0;
+$success: #1ecab8;
+$danger: #f1646c;
+$dark-blue: #28365f;
+$dark-gray: #171f33;
+$yellow: #f3c74d;
+ 
+/* Reset */
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM plex Sans', sans-serif;
+    background: $dark;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.section__heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: $pure;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1px rgba(40,54,95,0.1);
+    position: relative;
+
+    &:after {
+        content: '';
+        height: 2px;
+        width: 80px;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        background: $danger;
+    }
+}
+
+section {
+    padding: 3rem;
+}
+
+main {
+    background: $primary;
+}

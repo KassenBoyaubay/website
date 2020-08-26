@@ -1,0 +1,107 @@
+// Skills
+
+section {
+    &.skills {
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+
+            .left {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .heading {
+                    margin-bottom: 2rem;
+
+                    i {
+                        color: $fade;
+                        font-size: 52px;
+                    }
+
+                    h5 {
+                        font-size: 16px;
+                        margin-top: 0.5rem;
+                        color: $mild;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    color: $ternary;
+                    line-height: 1.7;
+
+                    &.center {
+                        color: $fade;
+                    }
+                }
+
+                .item {
+                    margin-bottom: 2.6rem;
+                    margin-left: 15px;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 10px;
+                        height: 10px;
+                        border: 2px solid $info;
+                        border-radius: 50%;
+                        margin-left: -21px;
+                    }
+                }
+
+                .timeline__wrapper {
+                    border-left: 2px dotted $dark-blue;
+                }
+            }
+
+            .right {
+                .skills__wrapper {
+                    .skill-box {
+                        margin-bottom: 4rem;
+        
+                        h4 {
+                            color: $ternary;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            margin-bottom: 1rem;
+                        }
+         
+                        .progress__wrap {
+                            background: #20294a;
+                            height: 6px;
+                            width: 100%;
+                            box-shadow: 0 0 1px 0.25px #4d79f6;
+                            border-radius: 10px;
+                            border: 2px solid $primary;
+         
+                            .progress__bar {
+                                display: block;
+                                height: 100%;
+                                background: $info;
+                                width: 0;
+                                position: relative;
+                                transition: all 1s ease-in-out;
+        
+                                .tooltip {
+                                    position: absolute;
+                                    right: -15px;
+                                    top: -30px;
+                                    margin-bottom: 10px;
+                                    color: $ternary;
+                                    font-size: 16px;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
