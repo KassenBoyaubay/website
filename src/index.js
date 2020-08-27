@@ -19,6 +19,8 @@ import ContactForm from "./components/contact_form/contactForm";
 import SVGBubbles_example from "./components/SVG_section_dividers_1/SVGBubbles_example";
 // SVG examples
 import SVG_example from "./components/SVG_section_divider_2/SVG_example";
+// Minesweeper
+import Minesweeper from "./components/minesweeper/minesweeper";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -30,6 +32,7 @@ ReactDOM.render(
       <Route path="/contactForm" component={ContactForm} />
       <Route path="/SVGBubbles_example" component={SVGBubbles_example} />
       <Route path="/SVG_example" component={SVG_example} />
+      <Route path="/minesweeper" component={Minesweeper} />
     </Switch>
   </BrowserRouter>,
   document.querySelector("#root")

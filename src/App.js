@@ -158,6 +158,9 @@ const App = () => {
         <Link to="/SVG_example">
           <button>SVG example</button>
         </Link>
+        <Link to="/minesweeper">
+          <button>Minesweeper</button>
+        </Link>
         <a href="./Blogger/Index.html">
           <button>Blogger</button>
         </a>
