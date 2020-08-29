@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import "./minesweeper.scss";
+import { useEffect } from "react";
 
 const Minesweeper = () => {
   const [bombAmount, setBombAmount] = useState(20);
   const [flags, setFlags] = useState(0);
   const [total, setTotal] = useState([]);
-  const [squareId, setSquareId] = useState([]);
   const [squareClass, setSquareClass] = useState([]);
   const [squareContent, setSquareContent] = useState([]);
   const [result, setResult] = useState("");
   const [isGameOver, setIsGameOver] = useState(false);
+  const [yep, setYep] = useState(-1);
+  const [width, setWidth] = useState(10);
 
-  var squareIdLoop = [];
   var squareClassLoop = [];
   var squareContentLoop = [];
-
-  const width = 10;
 
   function squareOnClick(e, id) {
     //cntrl and left click
@@ -31,7 +30,7 @@ const Minesweeper = () => {
 
   //add Flag with right click
   function addFlag(i) {
-    if (isGameOver) return null;
+    if (isGameOver) return;
     else if (
       !squareClass[i].includes("checked") &&
       flags < bombAmount &&
@@ -60,19 +59,19 @@ const Minesweeper = () => {
 
   //click on square actions
   function click(i) {
-    if (isGameOver) return null;
+    if (isGameOver) return;
     else if (
       squareClass[i].includes("checked") ||
       squareClass[i].includes("flag")
     )
-      return null;
+      return;
     else if (squareClass[i].includes("bomb")) {
       gameOver(i);
     } else {
+      setSquareClass((prev) =>
+        prev.map((item, index) => (index === i ? (item += " checked") : item))
+      );
       if (total[i] !== 0) {
-        setSquareClass((prev) =>
-          prev.map((item, index) => (index === i ? (item += " checked") : item))
-        );
         if (total[i] === 1)
           setSquareClass((prev) =>
             prev.map((item, index) => (index === i ? (item += " one") : item))
@@ -92,14 +91,15 @@ const Minesweeper = () => {
         setSquareContent((prev) =>
           prev.map((item, index) => (index === i ? (item = total[i]) : item))
         );
-        return null;
+        return;
       }
-      checkSquare(i);
+      setYep(i);
     }
-    setSquareClass((prev) =>
-      prev.map((item, index) => (index === i ? (item += " checked") : item))
-    );
   }
+
+  useEffect(() => {
+    if (yep !== -1) checkSquare(yep);
+  }, [yep]);
 
   //check for win
   function checkForWin() {
@@ -139,8 +139,8 @@ const Minesweeper = () => {
 
   //check neighboring squares once square is clicked
   function checkSquare(i) {
-    const isLeftEdge = i % width === 0;
-    const isRightEdge = i % width === width - 1;
+    let isLeftEdge = i % width === 0;
+    let isRightEdge = i % width === width - 1;
 
     setTimeout(() => {
       if (i > 0 && !isLeftEdge) {
@@ -172,6 +172,9 @@ const Minesweeper = () => {
 
   //create Board
   function createBoard() {
+    setIsGameOver(false);
+    setResult("");
+
     //get shuffled game array with random bombs
     const bombsArray = Array(bombAmount).fill("bomb");
     const emptyArray = Array(width * width - bombAmount).fill("valid");
@@ -179,7 +182,6 @@ const Minesweeper = () => {
     const shuffledArray = gameArray.sort(() => Math.random() - 0.5);
 
     for (let i = 0; i < width * width; i++) {
-      squareIdLoop = [...squareIdLoop, i];
       squareClassLoop = [...squareClassLoop, shuffledArray[i]];
       squareContentLoop = [...squareContentLoop, ""];
     }
@@ -189,8 +191,8 @@ const Minesweeper = () => {
     //add numbers
     for (let i = 0; i < width * width; i++) {
       totalLoop[i] = 0;
-      const isLeftEdge = i % width === 0;
-      const isRightEdge = i % width === width - 1;
+      let isLeftEdge = i % width === 0;
+      let isRightEdge = i % width === width - 1;
 
       // Logic is not correct if width is not 10
       if (squareClassLoop[i].includes("valid")) {
@@ -235,7 +237,6 @@ const Minesweeper = () => {
           totalLoop[i]++; // D      90
       }
     }
-    setSquareId(squareIdLoop);
     setSquareClass(squareClassLoop);
     setSquareContent(squareContentLoop);
     setTotal(totalLoop);
@@ -244,13 +245,14 @@ const Minesweeper = () => {
   return (
     <div className="Minesweeper">
       <div className="ms-container">
-        <button onClick={() => createBoard()}>Start</button>
-        <h2>Recursion is broken</h2>
+        <button onClick={() => createBoard()}>
+          {isGameOver ? "Restart" : "Start"}
+        </button>
         <div className="ms-grid">
           {[...Array(width * width)].map((value, i) => (
             <div
               key={i}
-              id={squareId[i]}
+              id={i}
               className={squareClass[i]}
               onClick={(e) => squareOnClick(e, i)}
               data={total[i]}
@@ -263,7 +265,6 @@ const Minesweeper = () => {
           Flags left: <span id="flags-left">{bombAmount - flags}</span>
         </div>
         <div id="result">{result}</div>
-        <hr />
       </div>
     </div>
   );
