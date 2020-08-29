@@ -16,6 +16,7 @@ import RealPhone from "./components/real_phone/realPhone";
 import SignForm from "./components/sign_form/signForm";
 import SkewedBorderBox from "./components/skewed_border_box/skewedBorderBox";
 import StatsCard from "./components/stats_card/statsCard";
+import Minesweeper from "./components/minesweeper/minesweeper";
 
 const App = () => {
   const name = "Kas";
@@ -127,6 +128,10 @@ const App = () => {
       <br />
       <h2>Stats Card</h2>
       <StatsCard />
+      <br />
+      <h2>Minesweeper</h2>
+      <Minesweeper />
+      <br />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
@@ -158,8 +163,8 @@ const App = () => {
         <Link to="/SVG_example">
           <button>SVG example</button>
         </Link>
-        <Link to="/minesweeper">
-          <button>Minesweeper</button>
+        <Link to="/weatherAPI">
+          <button>Weather API</button>
         </Link>
         <a href="./Blogger/Index.html">
           <button>Blogger</button>

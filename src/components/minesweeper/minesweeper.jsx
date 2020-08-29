@@ -264,7 +264,9 @@ const Minesweeper = () => {
         <div>
           Flags left: <span id="flags-left">{bombAmount - flags}</span>
         </div>
-        <div id="result">{result}</div>
+        <div id="result">
+          {result ? result : "ctrl + click to place a flag"}
+        </div>
       </div>
     </div>
   );
