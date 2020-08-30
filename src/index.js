@@ -21,6 +21,8 @@ import SVGBubbles_example from "./components/SVG_section_dividers_1/SVGBubbles_e
 import SVG_example from "./components/SVG_section_divider_2/SVG_example";
 // Weather API
 import WeatherAPI from "./components/weather_api/weatherAPI";
+// Book List
+import BookList from "./components/book_list/bookList";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -33,6 +35,7 @@ ReactDOM.render(
       <Route path="/SVGBubbles_example" component={SVGBubbles_example} />
       <Route path="/SVG_example" component={SVG_example} />
       <Route path="/weatherAPI" component={WeatherAPI} />
+      <Route path="/bookList" component={BookList} />
     </Switch>
   </BrowserRouter>,
   document.querySelector("#root")
