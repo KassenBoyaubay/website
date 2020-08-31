@@ -17,6 +17,7 @@ import SignForm from "./components/sign_form/signForm";
 import SkewedBorderBox from "./components/skewed_border_box/skewedBorderBox";
 import StatsCard from "./components/stats_card/statsCard";
 import Minesweeper from "./components/minesweeper/minesweeper";
+import ContentSlider from "./components/content_slider/contentSlider";
 
 const App = () => {
   const name = "Kas";
@@ -132,6 +133,8 @@ const App = () => {
       <h2>Minesweeper</h2>
       <Minesweeper />
       <br />
+      <h2>Content slider</h2>
+      <ContentSlider />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
