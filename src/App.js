@@ -169,6 +169,9 @@ const App = () => {
         <Link to="/bookList">
           <button>Book List</button>
         </Link>
+        <Link to="/hangman">
+          <button>Hangman</button>
+        </Link>
         <a href="./Blogger/Index.html">
           <button>Blogger</button>
         </a>

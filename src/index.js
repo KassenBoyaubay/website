@@ -23,6 +23,8 @@ import SVG_example from "./components/SVG_section_divider_2/SVG_example";
 import WeatherAPI from "./components/weather_api/weatherAPI";
 // Book List
 import BookList from "./components/book_list/bookList";
+// Hangman
+import Hangman from "./components/hangman/App";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -36,6 +38,7 @@ ReactDOM.render(
       <Route path="/SVG_example" component={SVG_example} />
       <Route path="/weatherAPI" component={WeatherAPI} />
       <Route path="/bookList" component={BookList} />
+      <Route path="/hangman" component={Hangman} />
     </Switch>
   </BrowserRouter>,
   document.querySelector("#root")
