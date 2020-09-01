@@ -18,6 +18,7 @@ import SkewedBorderBox from "./components/skewed_border_box/skewedBorderBox";
 import StatsCard from "./components/stats_card/statsCard";
 import Minesweeper from "./components/minesweeper/minesweeper";
 import ContentSlider from "./components/content_slider/contentSlider";
+import ImageLightbox from "./components/image_lightbox/imageLightbox";
 
 const App = () => {
   const name = "Kas";
@@ -135,6 +136,9 @@ const App = () => {
       <br />
       <h2>Content slider</h2>
       <ContentSlider />
+      <br />
+      <h2>Image Lightbox</h2>
+      <ImageLightbox />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
