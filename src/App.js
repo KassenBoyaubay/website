@@ -19,6 +19,7 @@ import StatsCard from "./components/stats_card/statsCard";
 import Minesweeper from "./components/minesweeper/minesweeper";
 import ContentSlider from "./components/content_slider/contentSlider";
 import ImageLightbox from "./components/image_lightbox/imageLightbox";
+import TypewriterEffect from "./components/typewriter_effect/TypewriterEffect";
 
 const App = () => {
   const name = "Kas";
@@ -139,6 +140,9 @@ const App = () => {
       <br />
       <h2>Image Lightbox</h2>
       <ImageLightbox />
+      <br />
+      <h2>Typewriter Effect</h2>
+      <TypewriterEffect />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
