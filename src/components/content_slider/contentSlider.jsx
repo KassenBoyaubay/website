@@ -111,9 +111,9 @@ const ContentSlider = () => {
 
   return (
     <div className="ContentSlider">
-      <div class="cs-container">
+      <div className="cs-container">
         <ul
-          class="slider-container simple-list"
+          className="slider-container simple-list"
           id="slider"
           style={{ height: `${topHeight}px` }}
         >
