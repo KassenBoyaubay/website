@@ -1,12 +1,12 @@
 // Video
-  
+.mySas {
   header {
     min-height: 100vh;
     position: relative;
     display: grid;
     place-items: center;
   }
-  
+
   .video-container {
     position: absolute;
     top: 0;
@@ -20,8 +20,8 @@
     color: $white;
   }
 
-// Switch button
-  
+  // Switch button
+
   .switch-btn {
     position: absolute;
     bottom: 7%;
@@ -58,7 +58,7 @@
     left: 50%;
   }
 
-// Header after 
+  // Header after
 
   header::after {
     content: "";
@@ -71,7 +71,7 @@
     z-index: -1;
   }
 
-// Button
+  // Button
 
   .btn {
     text-transform: uppercase;
@@ -91,3 +91,4 @@
     color: $white;
     background: $black;
   }
+}

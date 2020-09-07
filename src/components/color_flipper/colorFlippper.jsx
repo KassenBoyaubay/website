@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./colorFlipper.scss";
 
 const ColorFlipper = () => {
   const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
@@ -18,7 +17,7 @@ const ColorFlipper = () => {
   }
 
   return (
-    <div className="ColorFlipper">
+    <div className="mySass ColorFlipper">
       <main style={{ background: `${color}` }}>
         <div class="cf-container">
           <h2>

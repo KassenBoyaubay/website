@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// Sass
+import "./sass/main.scss";
 
 // App
 import App from "./App";

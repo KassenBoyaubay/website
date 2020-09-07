@@ -5,7 +5,7 @@ $dark-blue1: #16162d;
 $dark-blue2: #221e3f;
 $dark-blue3: hsl(209, 61%, 16%);
 $blue: #49a6e9;
-$blue2: hsla(182, 63%, 54%);
+$blue2: hsl(182, 63%, 54%);
 $light-blue: hsl(205, 100%, 96%);
 $grey: hsl(210, 22%, 49%);
 $background: hsl(210, 36%, 96%);
@@ -17,20 +17,19 @@ $red-light: hsl(360, 71%, 66%);
 $green: hsl(125, 67%, 44%);
 $salad: hsl(125, 71%, 66%);
 
-
 // Fonts
 
-$title1: 'Nanum Pen Script', cursive;
-$title2: 'Great Vibes', cursive;
-$secondary: 'DM Mono', monospace;
-
+$title1: "Nanum Pen Script", cursive;
+$title2: "Great Vibes", cursive;
+$secondary: "DM Mono", monospace;
+$ff-primary: "Roboto", sans-serif;
+$ff-secondary: "Open Sans", sans-serif;
 
 // Box-shadow
 
 $pink-box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
 
 // Gradients
 
@@ -45,4 +44,3 @@ $fixed-width: 620px;
 $transition: all 0.3s linear;
 $spacing: 0.25rem;
 $radius: 0.5rem;
-

@@ -1,0 +1,35 @@
+.mySass {
+  nav {
+    background: $white;
+    height: 3rem;
+    display: grid;
+    align-items: center;
+    box-shadow: $dark-shadow;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: $fixed-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-center h4 {
+    margin-bottom: 0;
+    color: $blue;
+  }
+  .nav-links {
+    display: flex;
+  }
+  nav a {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $dark-blue1;
+    letter-spacing: $spacing;
+    margin-right: 1rem;
+  }
+  nav a:hover {
+    color: $blue;
+  }
+}
