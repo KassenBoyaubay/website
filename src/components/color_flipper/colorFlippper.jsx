@@ -19,11 +19,15 @@ const ColorFlipper = () => {
   return (
     <div className="mySass ColorFlipper">
       <main style={{ background: `${color}` }}>
-        <div class="cf-container">
+        <div className="cf-container">
           <h2>
-            background color : <span class="color">{color}</span>
+            background color : <span className="color">{color}</span>
           </h2>
-          <button class="btn btn-hero" id="btn" onClick={() => changeColor()}>
+          <button
+            className="btn btn-hero"
+            id="btn"
+            onClick={() => changeColor()}
+          >
             click me
           </button>
         </div>

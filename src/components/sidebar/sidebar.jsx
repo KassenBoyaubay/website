@@ -12,17 +12,17 @@ const Sidebar = () => {
 
   return (
     <div className="mySass Sidebar">
-      <button class="sidebar-toggle" onClick={() => toggleBar()}>
-        <i class="fas fa-bars"></i>
+      <button className="sidebar-toggle" onClick={() => toggleBar()}>
+        <i className="fas fa-bars"></i>
       </button>
-      <aside class={`sidebar ${show}`}>
-        <div class="sidebar-header">
-          <img src={logo} class="logo" alt="" />
-          <button class="close-btn" onClick={() => setShow("")}>
-            <i class="fas fa-times"></i>
+      <aside className={`sidebar ${show}`}>
+        <div className="sidebar-header">
+          <img src={logo} className="logo" alt="" />
+          <button className="close-btn" onClick={() => setShow("")}>
+            <i className="fas fa-times"></i>
           </button>
         </div>
-        <ul class="links">
+        <ul className="links">
           <li>
             <a href="index.html">home</a>
           </li>
@@ -36,30 +36,30 @@ const Sidebar = () => {
             <a href="contact.html">contact</a>
           </li>
         </ul>
-        <ul class="social-icons">
+        <ul className="social-icons">
           <li>
             <a href="https://www.twitter.com">
-              <i class="fab fa-facebook"></i>
+              <i className="fab fa-facebook"></i>
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com">
-              <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com">
-              <i class="fab fa-behance"></i>
+              <i className="fab fa-behance"></i>
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com">
-              <i class="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com">
-              <i class="fab fa-sketch"></i>
+              <i className="fab fa-sketch"></i>
             </a>
           </li>
         </ul>

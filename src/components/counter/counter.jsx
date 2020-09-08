@@ -5,7 +5,7 @@ const Counter = () => {
   return (
     <div className="mySass Counter">
       <main>
-        <div class="c-container">
+        <div className="c-container">
           <h1>counter</h1>
           <span
             id="value"
@@ -15,9 +15,9 @@ const Counter = () => {
           >
             {number}
           </span>
-          <div class="button-container">
+          <div className="button-container">
             <button
-              class="btn decrease"
+              className="btn decrease"
               onClick={() => {
                 setNumber(number - 1);
               }}
@@ -25,7 +25,7 @@ const Counter = () => {
               decrease
             </button>
             <button
-              class="btn reset"
+              className="btn reset"
               onClick={() => {
                 setNumber(0);
               }}
@@ -33,7 +33,7 @@ const Counter = () => {
               reset
             </button>
             <button
-              class="btn increase"
+              className="btn increase"
               onClick={() => {
                 setNumber(number + 1);
               }}
