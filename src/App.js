@@ -26,6 +26,7 @@ import ColorFlipper from "./components/color_flipper/colorFlippper";
 import Counter from "./components/counter/counter";
 import Reviews from "./components/reviews/reviews";
 import Sidebar from "./components/sidebar/sidebar";
+import Modal from "./components/modal/modal";
 
 const App = () => {
   const name = "Kas";
@@ -167,6 +168,9 @@ const App = () => {
       <br />
       <h2>Sidebar</h2>
       <Sidebar />
+      <br />
+      <h2>Modal</h2>
+      <Modal />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import logo from "./logo.svg";
+
 const Sidebar = () => {
   const [show, setShow] = useState("");
 
@@ -15,7 +17,7 @@ const Sidebar = () => {
       </button>
       <aside class={`sidebar ${show}`}>
         <div class="sidebar-header">
-          <img src="logo.svg" class="logo" alt="" />
+          <img src={logo} class="logo" alt="" />
           <button class="close-btn" onClick={() => setShow("")}>
             <i class="fas fa-times"></i>
           </button>
