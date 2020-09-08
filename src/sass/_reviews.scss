@@ -1,0 +1,117 @@
+.mySass.Reviews {
+  main {
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+    padding: 4rem 0;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .underline {
+    height: 0.25rem;
+    width: 5rem;
+    background: $blue;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .r-container {
+    width: 80vw;
+    max-width: $fixed-width;
+  }
+  .review {
+    background: $white;
+    padding: 1.5rem 2rem;
+    border-radius: $radius;
+    box-shadow: $light-shadow;
+    transition: $transition;
+    text-align: center;
+  }
+  .review:hover {
+    box-shadow: $dark-shadow;
+  }
+  .img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+  #person-img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+  }
+  .img-container::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10e";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translateY(25%);
+    background: $blue;
+    color: $white;
+  }
+  .img-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: $blue;
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    border-radius: 50%;
+  }
+  #author {
+    margin-bottom: 0.25rem;
+  }
+  #job {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: $blue;
+    font-size: 0.85rem;
+  }
+  #info {
+    margin-bottom: 0.75rem;
+  }
+  .prev-btn,
+  .next-btn {
+    color: $blue2;
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 0.5rem;
+    transition: $transition;
+    cursor: pointer;
+  }
+  .prev-btn:hover,
+  .next-btn:hover {
+    color: $blue;
+  }
+  .random-btn {
+    margin-top: 0.5rem;
+    background: $light-blue;
+    color: $blue;
+    padding: 0.25rem 0.5rem;
+    text-transform: capitalize;
+    border-radius: $radius;
+    transition: $transition;
+    border-color: $blue;
+    cursor: pointer;
+  }
+  .random-btn:hover {
+    background: $blue;
+    color: $dark-blue2;
+  }
+}
