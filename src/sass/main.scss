@@ -15,6 +15,7 @@
 @import "sidebar";
 @import "modal";
 @import "questions";
+@import "menu";
 //background: url("./hero.jpeg") center/cover no-repeat;
 
 html {
@@ -40,6 +41,14 @@ html {
   a {
     text-decoration: none;
   }
+
+  img:not(.logo) {
+    width: 100%;
+  }
+  img {
+    display: block;
+  }
+
   h1,
   h2,
   h3,
