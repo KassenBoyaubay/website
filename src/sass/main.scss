@@ -14,11 +14,12 @@
 @import "reviews";
 @import "sidebar";
 @import "modal";
+//background: url("./hero.jpeg") center/cover no-repeat;
 @import "questions";
 @import "menu";
 @import "video";
 @import "tabs2";
-//background: url("./hero.jpeg") center/cover no-repeat;
+@import "countdownTimer";
 
 html {
   scroll-behavior: smooth;

@@ -31,6 +31,7 @@ import Modal from "./components/modal/modal";
 import Questions from "./components/questions/questions";
 import Menu from "./components/menu/menu";
 import VideoEffect from "./components/video/video";
+import CountdownTimer from "./components/countdown_timer/countdownTimer";
 
 const App = () => {
   const name = "Kas";
@@ -187,6 +188,9 @@ const App = () => {
       <br />
       <h2>Video</h2>
       <VideoEffect />
+      <br />
+      <h2>Countdown Timer</h2>
+      <CountdownTimer />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
