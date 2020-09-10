@@ -20,7 +20,8 @@ import Minesweeper from "./components/minesweeper/minesweeper";
 import ContentSlider from "./components/content_slider/contentSlider";
 import ImageLightbox from "./components/image_lightbox/imageLightbox";
 import TypewriterEffect from "./components/typewriter_effect/TypewriterEffect";
-import Tabs from "./components/tabs/tabs";
+import Tabs1 from "./components/tabs1/tabs1";
+import Tabs2 from "./components/tabs2/tabs2";
 import AutocompleteVanilla from "./components/autocomplete_vanilla/autocompleteVanilla";
 import ColorFlipper from "./components/color_flipper/colorFlippper";
 import Counter from "./components/counter/counter";
@@ -154,8 +155,11 @@ const App = () => {
       <h2>Typewriter Effect</h2>
       <TypewriterEffect />
       <br />
-      <h2>Tabs</h2>
-      <Tabs />
+      <h2>Tabs 1</h2>
+      <Tabs1 />
+      <br />
+      <h2>Tabs 2</h2>
+      <Tabs2 />
       <br />
       <h2>Autocomplete Vanilla</h2>
       <AutocompleteVanilla />

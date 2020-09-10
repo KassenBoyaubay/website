@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./tabs.scss";
+import "./tabs1.scss";
 import { useEffect } from "react";
 
-const Tabs = () => {
+const Tabs1 = () => {
   const tabs = [
     {
       name: "Jules Verne",
@@ -106,7 +106,7 @@ const Tabs = () => {
   }, []);
 
   return (
-    <div className="Tabs">
+    <div className="Tabs1">
       <div className="tabs-container">
         <ul className="tabs">
           {tabs.map((item, i) => (
@@ -132,4 +132,4 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+export default Tabs1;

@@ -1,0 +1,81 @@
+.mySass.Tabs2 {
+  .title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .title h5 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-img {
+    margin-bottom: 2rem;
+  }
+  .about-img img {
+    border-radius: $radius;
+    object-fit: cover;
+    height: 20rem;
+  }
+  @media screen and (min-width: 992px) {
+    .about-img {
+      margin-bottom: 0;
+    }
+
+    .about-center {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+    }
+  }
+  .about {
+    background: $white;
+    border-radius: $radius;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+  .btn-container {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tab-btn:nth-child(1) {
+    border-top-left-radius: $radius;
+  }
+  .tab-btn:nth-child(3) {
+    border-top-right-radius: $radius;
+  }
+  .tab-btn {
+    padding: 1rem 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    display: block;
+    background: $light-grey;
+    cursor: pointer;
+    transition: $transition;
+    letter-spacing: $spacing;
+  }
+  .tab-btn:hover:not(.active) {
+    background: $light-blue;
+    color: $blue;
+  }
+  .about-content {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    padding: 2rem 1.5rem;
+  }
+  /* hide content */
+  .content {
+    display: none;
+  }
+  .tab-btn.active {
+    background: $white;
+  }
+  .content.active {
+    display: block;
+  }
+  .active {
+    opacity: 1;
+  }
+}
