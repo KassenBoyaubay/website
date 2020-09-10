@@ -256,6 +256,9 @@ const App = () => {
         <a href="./Portfolio_7/index.html">
           <button>Portfolio_7</button>
         </a>
+        <a href="./Scroll_Project/index.html">
+          <button>Scroll Project</button>
+        </a>
       </div>
       <AppStyledComponent color="blue" size="large">
         Blue
