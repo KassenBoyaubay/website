@@ -29,6 +29,7 @@ import Sidebar from "./components/sidebar/sidebar";
 import Modal from "./components/modal/modal";
 import Questions from "./components/questions/questions";
 import Menu from "./components/menu/menu";
+import VideoEffect from "./components/video/video";
 
 const App = () => {
   const name = "Kas";
@@ -179,6 +180,9 @@ const App = () => {
       <br />
       <h2>Menu</h2>
       <Menu />
+      <br />
+      <h2>Video</h2>
+      <VideoEffect />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
