@@ -32,6 +32,7 @@ import Questions from "./components/questions/questions";
 import Menu from "./components/menu/menu";
 import VideoEffect from "./components/video/video";
 import CountdownTimer from "./components/countdown_timer/countdownTimer";
+import TextGenerator from "./components/text_generator/textGenerator";
 
 const App = () => {
   const name = "Kas";
@@ -191,6 +192,9 @@ const App = () => {
       <br />
       <h2>Countdown Timer</h2>
       <CountdownTimer />
+      <br />
+      <h2>Text Generator</h2>
+      <TextGenerator />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
