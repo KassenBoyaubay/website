@@ -33,6 +33,7 @@ import Menu from "./components/menu/menu";
 import VideoEffect from "./components/video/video";
 import CountdownTimer from "./components/countdown_timer/countdownTimer";
 import TextGenerator from "./components/text_generator/textGenerator";
+import TodoVanilla from "./components/todo_vanilla/todoVanilla";
 
 const App = () => {
   const name = "Kas";
@@ -195,6 +196,9 @@ const App = () => {
       <br />
       <h2>Text Generator</h2>
       <TextGenerator />
+      <br />
+      <h2>Todo Vanilla</h2>
+      <TodoVanilla />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
