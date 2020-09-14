@@ -35,6 +35,7 @@ import CountdownTimer from "./components/countdown_timer/countdownTimer";
 import TextGenerator from "./components/text_generator/textGenerator";
 import TodoVanilla from "./components/todo_vanilla/todoVanilla";
 import Slider from "./components/slider/slider";
+import SliderReview from "./components/slider_review/sliderReview";
 
 const App = () => {
   const name = "Kas";
@@ -203,6 +204,10 @@ const App = () => {
       <br />
       <h2>Slider</h2>
       <Slider />
+      <br />
+      <h2>Slider Review</h2>
+      {/* style state works for 3, if more remove style and change in scss */}
+      <SliderReview />
       <div className="home" style={{ display: "flex" }}>
         <Tweets me={name} age={age} />
         <Tweets me="NotKas" age="30" />
