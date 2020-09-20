@@ -4,6 +4,7 @@ import "./typewriterEffect.scss";
 const TypewriterEffect = ({
   Newtext = "Animation typewriter style using css steps()",
   TypewriterEffect = "TypewriterEffectExample",
+  button = true,
 }) => {
   const [anim, setAnim] = useState("anim-typewriter");
   const [text, setText] = useState(Newtext);
@@ -24,11 +25,13 @@ const TypewriterEffect = ({
   return (
     <div className={TypewriterEffect}>
       <p className={`line-1 ${anim}`}>{text}</p>
-      <div className="te-button">
-        <button onClick={() => reset(toggleAnim)}>
-          {toggleAnim ? "Reset typewriter animation effect" : "Start again"}
-        </button>
-      </div>
+      {button && (
+        <div className="te-button">
+          <button onClick={() => reset(toggleAnim)}>
+            {toggleAnim ? "Reset typewriter animation effect" : "Start again"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

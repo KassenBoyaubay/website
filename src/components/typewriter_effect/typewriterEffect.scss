@@ -63,62 +63,126 @@
 }
 
 .TypewriterEffectIntro {
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 4em;
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Anonymous Pro", monospace;
-  background-color: rgb(25, 25, 25);
-
   .line-1 {
-    position: relative;
-    top: 50%;
-    width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    font-size: 180%;
-    text-align: center;
+    border-right: 2px solid transparent;
     white-space: nowrap;
     overflow: hidden;
+    font-size: 6em;
   }
 
-  .te-button {
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
-
-    button {
-      font-size: 120%;
-      padding: 4px 6px;
-      font-weight: bold;
-      border: 1px solid white;
-      border-radius: 5px;
-
-      &:hover {
-        opacity: 0.9;
+  &.line1 {
+    /* Animation */
+    .anim-typewriter {
+      animation: typewriterIntro 1.5s steps(23) 1s 1 normal both,
+        blinkTextCursorIntro 2s steps(23) 1s normal forwards;
+    }
+    @keyframes typewriterIntro {
+      from {
+        width: 0;
+      }
+      to {
+        width: 12.5em;
+      }
+    }
+    @keyframes blinkTextCursorIntro {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+        border-right-color: transparent;
       }
     }
   }
 
-  /* Animation */
-  .anim-typewriter {
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-      blinkTextCursor 500ms steps(44) infinite normal;
+  &.line2 {
+    .anim-typewriter {
+      animation: typewriterIntro2 0.5s steps(7) 3s 1 normal both,
+        blinkTextCursorIntro2 1s steps(7) 3s normal forwards;
+    }
+    @keyframes typewriterIntro2 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 4em;
+      }
+    }
+    @keyframes blinkTextCursorIntro2 {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
   }
-  @keyframes typewriter {
-    from {
-      width: 0;
+
+  &.line3 {
+    .anim-typewriter {
+      animation: typewriterIntro3 0.5s steps(11) 4s 1 normal both,
+        blinkTextCursorIntro3 1s steps(11) 4s normal forwards;
     }
-    to {
-      width: 24em;
+    @keyframes typewriterIntro3 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 6em;
+      }
+    }
+    @keyframes blinkTextCursorIntro3 {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+        border-right-color: transparent;
+      }
     }
   }
-  @keyframes blinkTextCursor {
-    from {
-      border-right-color: rgba(255, 255, 255, 0.75);
+
+  &.line4 {
+    .anim-typewriter {
+      animation: typewriterIntro4 0.5s steps(12) 5s 1 normal both,
+        blinkTextCursorIntro4 1s steps(12) 5s normal forwards;
     }
-    to {
-      border-right-color: transparent;
+    @keyframes typewriterIntro4 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 6.5em;
+      }
+    }
+    @keyframes blinkTextCursorIntro4 {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  &.line5 {
+    .anim-typewriter {
+      animation: typewriterIntro5 1s steps(17) 6s 1 normal both,
+        blinkTextCursorIntro5 0.5s steps(17) 6s infinite normal forwards;
+    }
+    @keyframes typewriterIntro5 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 9.5em;
+      }
+    }
+    @keyframes blinkTextCursorIntro5 {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+        border-right-color: transparent;
+      }
     }
   }
 }

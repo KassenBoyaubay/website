@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Intro.module.scss";
-
-import TypewriterEffect from "../../components/typewriter_effect/TypewriterEffect";
+import TransitionOne from "./TransitionOne";
 
 const Intro = () => {
+  const [transitionOne, setTransitionOne] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTransitionOne(false);
+    }, 8000);
+  }, []);
+
   return (
-    <section id={styles.intro}>
-      <TypewriterEffect
-        Newtext={"Welcome!"}
-        TypewriterEffect={"TypewriterEffectIntro"}
-      />
-    </section>
+    <section id={styles.intro}>{transitionOne && <TransitionOne />}</section>
   );
 };
 
