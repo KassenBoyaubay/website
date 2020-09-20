@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./typewriterEffect.scss";
 
-const TypewriterEffect = () => {
+const TypewriterEffect = ({
+  Newtext = "Animation typewriter style using css steps()",
+  TypewriterEffect = "TypewriterEffectExample",
+}) => {
   const [anim, setAnim] = useState("anim-typewriter");
-  const [text, setText] = useState(
-    "Animation typewriter style using css steps()"
-  );
+  const [text, setText] = useState(Newtext);
   const [toggleAnim, setToggleAnim] = useState(true);
 
   const reset = (cond) => {
@@ -15,13 +16,13 @@ const TypewriterEffect = () => {
       setToggleAnim(false);
     } else {
       setAnim("anim-typewriter");
-      setText("Animation typewriter style using css steps()");
+      setText(Newtext);
       setToggleAnim(true);
     }
   };
 
   return (
-    <div className="TypewriterEffect">
+    <div className={TypewriterEffect}>
       <p className={`line-1 ${anim}`}>{text}</p>
       <div className="te-button">
         <button onClick={() => reset(toggleAnim)}>
