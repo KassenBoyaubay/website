@@ -36,6 +36,7 @@ import TodoVanilla from "./components/todo_vanilla/todoVanilla";
 import Slider from "./components/slider/slider";
 import SliderReview from "./components/slider_review/sliderReview";
 import ReactHooks from "./react_hooks/ReactHooks";
+import PixelArt from "./components/PixelArt/PixelArt";
 
 import Loading from "./App_components/Loading/Loading";
 import Intro from "./App_components/Intro/Intro";
@@ -223,6 +224,9 @@ const App = () => {
         <h2>Slider Review</h2>
         {/* style state works for 3, if more remove style and change in scss */}
         <SliderReview />
+        <br />
+        <h2>Pixel Art</h2>
+        <PixelArt />
         <ReactHooks />
         <div className="home" style={{ display: "flex" }}>
           <Tweets me={name} age={age} />

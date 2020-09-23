@@ -1,7 +1,73 @@
 .transitionOne {
   min-height: 100vh;
+  width: 100%;
   background-color: rgb(25, 25, 25);
   padding: 4em;
   color: rgba(255, 255, 255, 0.75);
   font-family: "Anonymous Pro", monospace;
+  position: fixed;
+  z-index: 99999;
+  .skipContainer {
+    display: inline-block;
+    padding: 0.5em 1em;
+    position: relative;
+    left: 86em;
+    bottom: 5em;
+    -webkit-animation: flickerAnimation 1s infinite;
+    -moz-animation: flickerAnimation 1s infinite;
+    -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+
+    p {
+      font-size: 26px;
+      letter-spacing: 2px;
+      padding: 0;
+      margin: 0;
+    }
+
+    @keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-o-keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-moz-keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 }

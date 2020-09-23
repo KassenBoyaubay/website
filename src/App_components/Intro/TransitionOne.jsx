@@ -3,9 +3,9 @@ import styles from "./TransitionOne.module.scss";
 
 import TypewriterEffect from "../../components/typewriter_effect/TypewriterEffect";
 
-const TransitionOne = () => {
+const TransitionOne = ({ onClick }) => {
   return (
-    <div className={styles.transitionOne}>
+    <div className={styles.transitionOne} onClick={onClick}>
       <TypewriterEffect
         Newtext={".Welcome to my Website!"}
         TypewriterEffect={"TypewriterEffectIntro line1"}
@@ -31,6 +31,9 @@ const TransitionOne = () => {
         TypewriterEffect={"TypewriterEffectIntro line5"}
         button={false}
       />
+      <div className={styles.skipContainer}>
+        <p>click anywhere to skip</p>
+      </div>
     </div>
   );
 };
