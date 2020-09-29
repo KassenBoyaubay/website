@@ -268,6 +268,9 @@ const App = () => {
           <Link to="/hangman">
             <button>Hangman</button>
           </Link>
+          <Link to="/amazonApp">
+            <button>Amazon App</button>
+          </Link>
           <a href="./Blogger/Index.html">
             <button>Blogger</button>
           </a>

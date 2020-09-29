@@ -27,6 +27,10 @@ import WeatherAPI from "./components/weather_api/weatherAPI";
 import BookList from "./components/book_list/bookList";
 // Hangman
 import Hangman from "./components/hangman/App";
+// Amazon App
+import AmazonApp from "./AmazonApp/AmazonApp";
+import reducer, { initialState } from "./AmazonApp/reducer";
+import { StateProvider } from "./AmazonApp/StateProvider";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -41,6 +45,9 @@ ReactDOM.render(
       <Route path="/weatherAPI" component={WeatherAPI} />
       <Route path="/bookList" component={BookList} />
       <Route path="/hangman" component={Hangman} />
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <Route path="/amazonApp" component={AmazonApp} />
+      </StateProvider>
     </Switch>
   </BrowserRouter>,
   document.querySelector("#root")
