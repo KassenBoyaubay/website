@@ -8,7 +8,7 @@ import Login from "./Login";
 import Payment from "./Payment";
 import Orders from "./Orders";
 import { useStateValue } from "./StateProvider";
-import { auth } from "./firebase.js";
+import { auth } from "../firebase.js";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
@@ -23,7 +23,7 @@ import { Elements } from "@stripe/react-stripe-js";
 //              at the end around  3:30:00 -> firebase baze plan
 //              npm run build -> firebase deploy
 //              to check w/ back-end
-//              firebase emulatoes:start
+//              firebase emulators:start
 //              update a plan w/ blaze
 //              firebase deploy --only functions
 //              in axios put url from functions in firebse

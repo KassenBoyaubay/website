@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 export default createUseStyles({
   app: {
     display: "flex",
-    width: "100vw",
+    width: "100hw",
     height: "60vw",
     justifyContent: "center",
     alignItems: "center",

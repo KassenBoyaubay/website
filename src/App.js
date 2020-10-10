@@ -37,6 +37,7 @@ import Slider from "./components/slider/slider";
 import SliderReview from "./components/slider_review/sliderReview";
 import ReactHooks from "./react_hooks/ReactHooks";
 import PixelArt from "./components/PixelArt/PixelArt";
+import SnakeGame from "./components/SnakeGame/SnakeGame";
 
 import Loading from "./App_components/Loading/Loading";
 import Intro from "./App_components/Intro/Intro";
@@ -227,6 +228,10 @@ const App = () => {
         <br />
         <h2>Pixel Art</h2>
         <PixelArt />
+        <br />
+        <h2>Snake Game</h2>
+        <SnakeGame />
+        <br />
         <ReactHooks />
         <div className="home" style={{ display: "flex" }}>
           <Tweets me={name} age={age} />

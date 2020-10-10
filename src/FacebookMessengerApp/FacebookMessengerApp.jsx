@@ -4,7 +4,7 @@ import Message from "./Message";
 import { FormControl, Input, IconButton } from "@material-ui/core";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import SendIcon from "@material-ui/icons/Send";
-import db from "./firebase";
+import { db } from "../firebase";
 import firebase from "firebase";
 import FlipMove from "react-flip-move";
 
@@ -19,7 +19,9 @@ function FacebookMessengerApp() {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    db.collection("messages")
+    db.collection("FacebookMessengerApp")
+      .doc("chatA")
+      .collection("messages")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
         setMessages(
@@ -34,11 +36,14 @@ function FacebookMessengerApp() {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    db.collection("messages").add({
-      message: input,
-      username: userName,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    db.collection("FacebookMessengerApp")
+      .doc("chatA")
+      .collection("messages")
+      .add({
+        message: input,
+        username: userName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
     setInput("");
   };
 
