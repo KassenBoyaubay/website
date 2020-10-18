@@ -33,6 +33,8 @@ import reducer, { initialState } from "./AmazonApp/reducer";
 import { StateProvider } from "./AmazonApp/StateProvider";
 // Facebook Messenger App
 import FacebookMessengerApp from "./FacebookMessengerApp/FacebookMessengerApp";
+// Social Media App
+import SocialMediaApp from "./SocialMediaApp/SocialMediaApp"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -48,6 +50,7 @@ ReactDOM.render(
       <Route path="/bookList" component={BookList} />
       <Route path="/hangman" component={Hangman} />
       <Route path="/facebookMessengerApp" component={FacebookMessengerApp} />
+      <Route path="/socialMediaApp" component={SocialMediaApp} />
       <StateProvider initialState={initialState} reducer={reducer}>
         <Route path="/amazonApp" component={AmazonApp} />
       </StateProvider>

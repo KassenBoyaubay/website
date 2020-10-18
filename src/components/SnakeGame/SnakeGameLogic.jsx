@@ -4,9 +4,6 @@ import useStyles from "./SnakeGameLogic.styles";
 import Snake from './components/Snake';
 import Food from './components/Food';
 
-// https://www.youtube.com/watch?v=-oOgsGP3t5o&list=PLlBzNJv1tsht93h2D6Y1Vt0pQgYbmT4S1&index=100
-// https://github.com/ChigabigaChannel/react-hour-projects/tree/master/snake-game/src
-
 const getRandomCoordinates = () => {
   let min = 1;
   let max = 98;
