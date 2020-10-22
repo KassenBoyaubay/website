@@ -14,8 +14,10 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
     "bootstrap-icons": "^1.0.0-alpha5",
+    "dayjs": "^1.9.3",
     "firebase": "^7.21.1",
     "jquery": "^3.5.1",
+    "jwt-decode": "^3.0.0",
     "moment": "^2.29.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -48,5 +50,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "proxy": "https://europe-west3-website-f5daf.cloudfunctions.net/api"
 }

@@ -1,15 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // MUI stuff
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button'
-import Link from 'react-router-dom/Link'
 
 function Navbar() {
     return (
         <div>
             <AppBar>
-                <Toolbar style={{margin: 'auto'}}>
+                <Toolbar style={{ margin: 'auto' }}>
                     <Button color="inherit">
                         <Link to="/socialMediaApp/login">
                             Login

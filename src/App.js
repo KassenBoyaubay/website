@@ -38,6 +38,7 @@ import SliderReview from "./components/slider_review/sliderReview";
 import ReactHooks from "./react_hooks/ReactHooks";
 import PixelArt from "./components/PixelArt/PixelArt";
 import SnakeGame from "./components/SnakeGame/SnakeGame";
+import TypingTest from "./components/typing_test/TypingTest";
 
 import Loading from "./App_components/Loading/Loading";
 import Intro from "./App_components/Intro/Intro";
@@ -232,6 +233,9 @@ const App = () => {
         <h2>Snake Game</h2>
         <SnakeGame />
         <br />
+        <h2>Typing Test</h2>
+        <TypingTest />
+        <br />
         <ReactHooks />
         <div className="home" style={{ display: "flex" }}>
           <Tweets me={name} age={age} />
@@ -278,6 +282,9 @@ const App = () => {
           </Link>
           <Link to="/facebookMessengerApp">
             <button>Facebook Messenger App</button>
+          </Link>
+          <Link to="/socialMediaApp">
+            <button>Social Media App</button>
           </Link>
           <a href="./Blogger/Index.html">
             <button>Blogger</button>
