@@ -9,8 +9,8 @@ export default createUseStyles({
     border: "2px solid #000",
     backgroundColor: "#fff",
     display: "grid",
-    gridTemplateColumns: "repeat(16, 1fr)",
-    gridTemplateRows: "repeat(16, 1fr)",
+    gridTemplateColumns: "repeat(25, 1fr)",
+    gridTemplateRows: "repeat(25, 1fr)",
   },
   box: {
     border: "2px solid rgba(0,0,0,0.2)"

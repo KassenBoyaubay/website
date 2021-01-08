@@ -141,7 +141,7 @@ const SnakeGameLogic = () => {
       <div className={classes.gameArea}>
         <Snake snakeDots={snakeDots} />
         <Food dot={food} />
-        {Array(256).fill(0).map((_, i) => <div key={i} className={classes.box}></div>)}
+        {Array(625).fill(0).map((_, i) => <div key={i} className={classes.box}></div>)}
       </div>
     </div>
   );

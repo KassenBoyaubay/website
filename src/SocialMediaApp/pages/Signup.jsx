@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AppIcon from "../images/icon.png"
-import axios from 'axios'
 // MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid';
@@ -9,40 +8,38 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
+// Redux stuff
+import { connect } from 'react-redux';
+import { signupUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
     ...theme.spread
 });
 
-function Signup({ classes, history }) {
+function Signup({ classes, history, signupUser, UI: { loading, errors } }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [handle, setHandle] = useState('')
-    const [errors, setErrors] = useState({})
-    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState({})
+    // const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        if (errors) {
+            setError(errors)
+        }
+    }, [errors])
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setLoading(true)
+        // setLoading(true)
         const newUserData = {
             email: email,
             password: password,
             confirmPassword: confirmPassword,
             handle: handle
         };
-        // this.props.loginUser(userData, this.props.history);
-        axios.post("/socialMediaApp/signup", newUserData)
-            .then(res => {
-                console.log(res.data)
-                localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
-                setLoading(false)
-                history.push('/socialMediaApp')
-            })
-            .catch(err => {
-                setErrors(err.response.data)
-                setLoading(false)
-            })
+        signupUser(newUserData, history);
     };
 
     return (
@@ -61,8 +58,8 @@ function Signup({ classes, history }) {
                             type="email"
                             label="Email"
                             className={classes.textField}
-                            helperText={errors.email}
-                            error={errors.email ? true : false}
+                            helperText={error.email}
+                            error={error.email ? true : false}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             fullWidth
@@ -73,8 +70,8 @@ function Signup({ classes, history }) {
                             type="password"
                             label="Password"
                             className={classes.textField}
-                            helperText={errors.password}
-                            error={errors.password ? true : false}
+                            helperText={error.password}
+                            error={error.password ? true : false}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             fullWidth
@@ -85,8 +82,8 @@ function Signup({ classes, history }) {
                             type="password"
                             label="Confirm Password"
                             className={classes.textField}
-                            helperText={errors.confirmPassword}
-                            error={errors.confirmPassword ? true : false}
+                            helperText={error.confirmPassword}
+                            error={error.confirmPassword ? true : false}
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             fullWidth
@@ -97,15 +94,15 @@ function Signup({ classes, history }) {
                             type="text"
                             label="Handle"
                             className={classes.textField}
-                            helperText={errors.handle}
-                            error={errors.handle ? true : false}
+                            helperText={error.handle}
+                            error={error.handle ? true : false}
                             value={handle}
                             onChange={(e) => setHandle(e.target.value)}
                             fullWidth
                         />
-                        {errors.general && (
+                        {error.general && (
                             <Typography variant="body2" className={classes.customError}>
-                                {errors.general}
+                                {error.general}
                             </Typography>
                         )}
                         <Button
@@ -132,4 +129,9 @@ function Signup({ classes, history }) {
     )
 }
 
-export default withStyles(styles)(Signup)
+const mapStateToProps = (state) => ({
+    user: state.user,
+    UI: state.UI
+});
+
+export default connect(mapStateToProps, { signupUser })(withStyles(styles)(Signup))

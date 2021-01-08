@@ -6,7 +6,7 @@ export default createUseStyles({
     width: "2%",
     height: "2%",
     backgroundColor: "red",
-    border: "1px solid #fff",
+    border: "1px solid #000",
     zIndex: "1"
   }
 });

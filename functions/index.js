@@ -1,5 +1,6 @@
 const functions = require("firebase-functions");
 const express = require("express");
+// cors middleware -> allow to use functions of firebase & other resources to whom it requests
 const cors = require("cors");
 const { request } = require("express");
 const { response } = require("express");
@@ -13,6 +14,7 @@ const { signup, login, uploadImage, addUserDetails, getAuthenticatedUser, getUse
 const { db } = require('./util/admin')
 
 const FBAuth = require('./util/fbAuth')
+
 
 // API
 

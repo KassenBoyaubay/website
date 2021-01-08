@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AppIcon from "../images/icon.png"
-import axios from 'axios'
 // MUI Stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid';
@@ -9,36 +8,32 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
+// Redux stuff
+import { connect } from 'react-redux';
+import { loginUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
     ...theme.spread
 });
 
-function Login({ classes, history }) {
+function Login({ classes, history, loginUser, UI: { loading, errors } }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [errors, setErrors] = useState({})
-    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState({})
+
+    useEffect(() => {
+        if (errors) {
+            setError(errors)
+        }
+    }, [errors])
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setLoading(true)
         const userData = {
             email: email,
             password: password
         };
-        // this.props.loginUser(userData, this.props.history);
-        axios.post("/socialMediaApp/login", userData)
-            .then(res => {
-                console.log(res.data)
-                localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
-                setLoading(false)
-                history.push('/socialMediaApp')
-            })
-            .catch(err => {
-                setErrors(err.response.data)
-                setLoading(false)
-            })
+        loginUser(userData, history);
     };
 
     return (
@@ -57,8 +52,8 @@ function Login({ classes, history }) {
                             type="email"
                             label="Email"
                             className={classes.textField}
-                            helperText={errors.email}
-                            error={errors.email ? true : false}
+                            helperText={error.email}
+                            error={error.email ? true : false}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             fullWidth
@@ -69,15 +64,15 @@ function Login({ classes, history }) {
                             type="password"
                             label="Password"
                             className={classes.textField}
-                            helperText={errors.password}
-                            error={errors.password ? true : false}
+                            helperText={error.password}
+                            error={error.password ? true : false}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             fullWidth
                         />
-                        {errors.general && (
+                        {error.general && (
                             <Typography variant="body2" className={classes.customError}>
-                                {errors.general}
+                                {error.general}
                             </Typography>
                         )}
                         <Button
@@ -104,4 +99,13 @@ function Login({ classes, history }) {
     )
 }
 
-export default withStyles(styles)(Login)
+const mapStateToProps = (state) => ({
+    user: state.user,
+    UI: state.UI
+});
+
+const mapActionsToProps = {
+    loginUser
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(Login))

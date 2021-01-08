@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import "./App.css";
+import styles from "./App.module.scss"
 
 import Tweets from "./components/Tweets";
 import State from "./components/State";
@@ -42,6 +43,7 @@ import TypingTest from "./components/typing_test/TypingTest";
 
 import Loading from "./App_components/Loading/Loading";
 import Intro from "./App_components/Intro/Intro";
+import HomeIntro from "./App_components/HomeIntro/HomeIntro";
 
 const App = () => {
   const name = "Kas";
@@ -50,10 +52,13 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   //Loaded website?
   const [loaded, setLoaded] = useState(false);
+  // skip intro
+  const [skipIntro, setSkipIntro] = useState(false)
 
   // When website is loaded
   useEffect(() => {
     setLoaded(true);
+    checkSkipIntro()
   }, []);
 
   useEffect(() => {
@@ -115,13 +120,20 @@ const App = () => {
     background: "#060c21",
   };
 
+  const checkSkipIntro = () => {
+    if (JSON.parse(localStorage.getItem("skipIntro")) === 'true') {
+      setSkipIntro(true)
+    }
+  }
+
   if (!loaded) return <Loading />;
   else
     return (
-      <div className="App">
+      <div className={styles.App}>
         <section>
-          <Intro />
+          {!skipIntro && <Intro />}
         </section>
+        <HomeIntro skip={skipIntro} />
         <h1>
           Hell
           <span>
@@ -129,113 +141,113 @@ const App = () => {
           </span>{" "}
           React{" "}
         </h1>
-        <br />
-        <h2>Neon Button Light</h2>
+
+        <div className={styles.SectionTitle}><h2>Neon Button Light</h2></div>
         <div style={buttonNeonContainer}>
           <ButtonNeon name={"Neon Button"} />
         </div>
-        <br />
-        <h2>Digital Clock</h2>
+
+        <div className={styles.SectionTitle}><h2>Digital Clock</h2></div>
         <ClockDigital />
-        <br />
-        <h2>Clock Neumorphism</h2>
+
+        <div className={styles.SectionTitle}><h2>Clock Neumorphism</h2></div>
         <div style={clockNeumorphismContainer}>
           <ClockNeumorphism />
-          <br />
+
         </div>
-        <br />
-        <h2>Dark Light Toggle Mode</h2>
+
+        <div className={styles.SectionTitle}><h2>Dark Light Toggle Mode</h2></div>
         <ToggleMode />
-        <br />
-        <h2>Flex Gallery</h2>
+
+        <div className={styles.SectionTitle}><h2>Flex Gallery</h2></div>
         <FlexGallery />
-        <br />
-        <h2>Real Phone</h2>
+
+        <div className={styles.SectionTitle}><h2>Real Phone</h2></div>
         <RealPhone />
-        <br />
-        <h2>Sign in/out Form</h2>
+
+        <div className={styles.SectionTitle}><h2>Sign in/out Form</h2></div>
         <div style={signFormContainer}>
           <SignForm />
         </div>
-        <br />
-        <h2>Skewed Border Box Border Hover Effect</h2>
+
+        <div className={styles.SectionTitle}><h2>Skewed Border Box Border Hover Effect</h2></div>
         <div style={skewedBorderBoxContainer}>
           <SkewedBorderBox />
         </div>
-        <br />
-        <h2>Stats Card</h2>
+
+        <div className={styles.SectionTitle}><h2>Stats Card</h2></div>
         <StatsCard />
-        <br />
-        <h2>Minesweeper</h2>
+
+        <div className={styles.SectionTitle}><h2>Minesweeper</h2></div>
         <Minesweeper />
-        <br />
-        <h2>Content slider</h2>
+
+        <div className={styles.SectionTitle}><h2>Content slider</h2></div>
         <ContentSlider />
-        <br />
-        <h2>Image Lightbox</h2>
+
+        <div className={styles.SectionTitle}><h2>Image Lightbox</h2></div>
         <ImageLightbox />
-        <br />
-        <h2>Typewriter Effect</h2>
+
+        <div className={styles.SectionTitle}><h2>Typewriter Effect</h2></div>
         <TypewriterEffect />
-        <br />
-        <h2>Tabs 1</h2>
+
+        <div className={styles.SectionTitle}><h2>Tabs 1</h2></div>
         <Tabs1 />
-        <br />
-        <h2>Tabs 2</h2>
+
+        <div className={styles.SectionTitle}><h2>Tabs 2</h2></div>
         <Tabs2 />
-        <br />
-        <h2>Autocomplete Vanilla</h2>
+
+        <div className={styles.SectionTitle}><h2>Autocomplete Vanilla</h2></div>
         <AutocompleteVanilla />
-        <br />
-        <h2>Color Flipper</h2>
+
+        <div className={styles.SectionTitle}><h2>Color Flipper</h2></div>
         <ColorFlipper />
-        <br />
-        <h2>Counter</h2>
+
+        <div className={styles.SectionTitle}><h2>Counter</h2></div>
         <Counter />
-        <br />
-        <h2>Reviews</h2>
+
+        <div className={styles.SectionTitle}><h2>Reviews</h2></div>
         <Reviews />
-        <br />
-        <h2>Sidebar</h2>
+
+        <div className={styles.SectionTitle}><h2>Sidebar</h2></div>
         <Sidebar />
-        <br />
-        <h2>Modal</h2>
+
+        <div className={styles.SectionTitle}><h2>Modal</h2></div>
         <Modal />
-        <br />
-        <h2>Questions</h2>
+
+        <div className={styles.SectionTitle}><h2>Questions</h2></div>
         <Questions />
-        <br />
-        <h2>Menu</h2>
+
+        <div className={styles.SectionTitle}><h2>Menu</h2></div>
         <Menu />
-        <br />
-        <h2>Video</h2>
+
+        <div className={styles.SectionTitle}><h2>Video</h2></div>
         <VideoEffect />
-        <br />
-        <h2>Countdown Timer</h2>
+
+        <div className={styles.SectionTitle}><h2>Countdown Timer</h2></div>
         <CountdownTimer />
-        <br />
-        <h2>Text Generator</h2>
+
+        <div className={styles.SectionTitle}><h2>Text Generator</h2></div>
         <TextGenerator />
-        <br />
-        <h2>Todo Vanilla</h2>
+
+        <div className={styles.SectionTitle}><h2>Todo Vanilla</h2></div>
         <TodoVanilla />
-        <br />
-        <h2>Slider</h2>
+
+        <div className={styles.SectionTitle}><h2>Slider</h2></div>
         <Slider />
-        <br />
-        <h2>Slider Review</h2>
+
+        <div className={styles.SectionTitle}><h2>Slider Review</h2></div>
         {/* style state works for 3, if more remove style and change in scss */}
         <SliderReview />
-        <br />
-        <h2>Pixel Art</h2>
+
+        <div className={styles.SectionTitle}><h2>Pixel Art</h2></div>
         <PixelArt />
-        <br />
-        <h2>Snake Game</h2>
+
+        <div className={styles.SectionTitle}><h2>Snake Game</h2></div>
         <SnakeGame />
-        <br />
-        <h2>Typing Test</h2>
+
+        <div className={styles.SectionTitle}><h2>Typing Test</h2></div>
         <TypingTest />
-        <br />
+
         <ReactHooks />
         <div className="home" style={{ display: "flex" }}>
           <Tweets me={name} age={age} />
@@ -249,7 +261,7 @@ const App = () => {
           }}
         >
           <State />
-          <br />
+
           <Link to="/animatedWebsite">
             <button>Animated Website</button>
           </Link>
@@ -324,7 +336,7 @@ const App = () => {
           </a>
         </div>
         <div className="todos">
-          <h2>ToDo API</h2>
+          <div className={styles.SectionTitle}><h2>ToDo API</h2></div>
           {todos.map((todo) => (
             <p key={todo.id}>
               {todo.id}. {todo.title}

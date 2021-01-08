@@ -1,0 +1,12 @@
+.HomeIntro {
+    min-height: 100vh;
+    background-color: rgb(25, 25, 25);
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    display: grid;
+    place-items: center;
+  
+    &_container {
+      background-color: rgb(10, 6, 6);
+    }
+  }

@@ -170,7 +170,7 @@ exports.getAuthenticatedUser = (request, response) => {
                     screamId: doc.data().screamId,
                     type: doc.data().type,
                     read: doc.data().read,
-                    notificationId: doc.Id,
+                    notificationId: doc.id
                 })
             })
             return response.send(userData)

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Intro.module.scss";
 import TransitionOne from "./TransitionOne";
-import TransitionTwo from "./TransitionTwo";
 
 const Intro = () => {
   const [transitionOne, setTransitionOne] = useState(true);
-  const [transitionTwo, setTransitionTwo] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,7 +13,6 @@ const Intro = () => {
 
   function transit() {
     setTransitionOne(false);
-    setTransitionTwo(true);
     // window.scrollTo({
     //   left: 0,
     //   top: 0,
@@ -25,7 +22,6 @@ const Intro = () => {
   return (
     <section id={styles.intro}>
       {transitionOne && <TransitionOne onClick={() => transit()} />}
-      {transitionTwo && <TransitionTwo />}
     </section>
   );
 };
