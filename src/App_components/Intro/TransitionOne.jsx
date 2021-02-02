@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./TransitionOne.module.scss";
 
 import TypewriterEffect from "../../components/typewriter_effect/TypewriterEffect";

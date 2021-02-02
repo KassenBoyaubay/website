@@ -27,7 +27,7 @@ const VideoMain = () => {
   const video = document.querySelector(".video-container");
 
   const videoClick = () => {
-    if (slide == "") {
+    if (slide === "") {
       setSlide("slide");
       video.pause();
     } else {

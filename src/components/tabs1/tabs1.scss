@@ -1,6 +1,7 @@
 .Tabs1 {
-  margin-top: 5em;
+  margin-top: 2.5em;
   font: 300 20px/1.5 "Helvetica", Arial, sans-serif;
+  background-color: #f1f5f8;
 
   .tabs-container {
     width: 75%;
@@ -24,7 +25,7 @@
     display: inline;
   }
 
-  .tabs li a {
+  .tabs li span {
     font-weight: 700;
     font-size: 16px;
     text-decoration: none;
@@ -39,23 +40,23 @@
     cursor: pointer;
   }
 
-  .tabs li a.active {
+  .tabs li span.active {
     background-color: #ffffff;
     color: #424242;
     cursor: default;
     opacity: 1;
   }
 
-  .tabs li a:hover:not(.active) {
+  .tabs li span:hover:not(.active) {
     background-color: rgba(245, 245, 245, 0.25);
     color: #424242;
   }
 
-  .tabs li:first-child a {
+  .tabs li:first-child span {
     border-radius: 5px 0 0 5px;
   }
 
-  .tabs li:last-child a {
+  .tabs li:last-child span {
     border-radius: 0 5px 5px 0;
   }
 

@@ -31,16 +31,16 @@ const RealPhone = () => {
           <div className="nav-links">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <span>Home</span>
               </li>
               <li>
-                <a href="#">Phone</a>
+                <span>Phone</span>
               </li>
               <li>
-                <a href="#">Accessories</a>
+                <span>Accessories</span>
               </li>
               <li>
-                <a href="#">Cart</a>
+                <span>Cart</span>
               </li>
             </ul>
           </div>
@@ -50,28 +50,28 @@ const RealPhone = () => {
           <img className="mobile" src={mobile} alt="" />
           <div id="circle" style={{ transform: circle }}>
             <div className="feature one">
-              <img src={camera} />
+              <img alt="" src={camera} />
               <div>
                 <h1>Camera</h1>
                 <p>12 MP, Wide Angle Lens</p>
               </div>
             </div>
             <div className="feature two">
-              <img src={processor} />
+              <img alt="" src={processor} />
               <div>
                 <h1>Processor</h1>
                 <p>Snapdragon Octa-core 11nms</p>
               </div>
             </div>
             <div className="feature three">
-              <img src={display} />
+              <img alt="" src={display} />
               <div>
                 <h1>Display</h1>
                 <p>6.5 Mini-Drop Fullscreen</p>
               </div>
             </div>
             <div className="feature four">
-              <img src={battery} />
+              <img alt="" src={battery} />
               <div>
                 <h1>Battery Life</h1>
                 <p>5000mAh, 720Hrs Standby</p>

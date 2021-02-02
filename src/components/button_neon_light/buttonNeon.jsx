@@ -4,13 +4,13 @@ import './buttonNeon.css'
 const ButtonNeon = ({ name }) => {
     return (
         <div className="buttonNeon">
-            <a href="#">
+            <div className="button">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 {name}
-            </a>
+            </div>
         </div>
     )
 }

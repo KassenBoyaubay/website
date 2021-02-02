@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 
 const TodoVanilla = () => {
   const [alertText, setAlertText] = useState("");
@@ -35,11 +34,11 @@ const TodoVanilla = () => {
       })
       .map((item) =>
         item.id < id
-          ? (item = item)
+          ? (item)
           : (item = {
-              id: item.id - 1,
-              val: item.val,
-            })
+            id: item.id - 1,
+            val: item.val,
+          })
       );
 
     localStorage.setItem("list", JSON.stringify(items));

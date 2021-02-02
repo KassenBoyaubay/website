@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useStyles from "./PixelArt.styles";
 
 import Grid from "./components/Grid";

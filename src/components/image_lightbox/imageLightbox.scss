@@ -1,4 +1,6 @@
 .ImageLightbox {
+  background-color: #f1f5f8;
+
   img {
     max-width: 100%;
     height: auto;
@@ -23,6 +25,7 @@
   .gallery li img {
     width: 100%;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .gallery li img:hover {

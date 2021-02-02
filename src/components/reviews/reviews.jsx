@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Allreviews = [
   {
@@ -40,7 +40,7 @@ const Allreviews = [
 ];
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState(Allreviews);
+  const [reviews] = useState(Allreviews);
   const [index, setIndex] = useState(0);
 
   const next = (cond) => {

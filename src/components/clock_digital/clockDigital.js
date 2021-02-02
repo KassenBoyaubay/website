@@ -7,13 +7,6 @@ const ClockDigital = () => {
     const [min, setMin] = useState()
     const [sec, setSec] = useState()
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            currentTime()
-        }, 1000)
-        return () => clearInterval(interval)
-    }, [])
-
     function currentTime() {
         var date = new Date()
         var hour = date.getHours()
@@ -23,6 +16,13 @@ const ClockDigital = () => {
         setMin(updateTime(min))
         setSec(updateTime(sec))
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            currentTime()
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [])
 
     function updateTime(k) {
         return k < 10 ? "0" + k : k

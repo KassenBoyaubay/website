@@ -1,5 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
 // MUI Stuff
@@ -30,7 +29,7 @@ function EditDetails({ classes, credentials, editUserDetails }) {
 
     useEffect(() => {
         mapUserDetailsToState(credentials);
-    }, [])
+    }, [credentials])
 
     const mapUserDetailsToState = (credentials) => {
         setBio(credentials.bio ? credentials.bio : '')
@@ -48,7 +47,7 @@ function EditDetails({ classes, credentials, editUserDetails }) {
     };
 
     const handleChange = (event) => {
-        event.target.name == 'bio' ? setBio(event.target.value) : event.target.name == 'website' ? setWebsite(event.target.value) : event.target.name == 'location' ? setLocation(event.target.value) : console.log('handleChange error')
+        event.target.name === 'bio' ? setBio(event.target.value) : event.target.name === 'website' ? setWebsite(event.target.value) : event.target.name === 'location' ? setLocation(event.target.value) : console.log('handleChange error')
     };
 
     const handleSubmit = () => {

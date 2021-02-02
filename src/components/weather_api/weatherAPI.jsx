@@ -65,7 +65,7 @@ const WeatherAPI = () => {
         "it's  not working because browser don't support  or because you should allow it"
       );
     }
-  }, []);
+  }, [loadData]);
 
   return (
     <div className="WeatherAPI">

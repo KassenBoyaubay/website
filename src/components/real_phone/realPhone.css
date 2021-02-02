@@ -40,7 +40,7 @@
   margin: 0 20px;
 }
 
-.RealPhone .nav-links ul li a {
+.RealPhone .nav-links ul li span {
   color: #fff;
   text-decoration: none;
 }

@@ -1,12 +1,39 @@
-.HomeIntro {
-    min-height: 100vh;
-    background-color: rgb(25, 25, 25);
-    color: rgba(255, 255, 255, 0.75);
-    text-align: center;
-    display: grid;
-    place-items: center;
-  
-    &_container {
-      background-color: rgb(10, 6, 6);
+.img2 {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.span {
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    font-size: 0.75rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.grid {
+    width: auto;
+}
+
+@media (min-width: 1024px) {
+    .img2 {
+        position: absolute;
+        display: block;
+        width: 400px;
+        height: 460px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+        box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+        border-radius: 4px;
     }
-  }
+
+    .span {
+        font-size: 1.25rem;
+    }
+
+    .grid {
+        width: 17rem;
+    }
+}

@@ -11,22 +11,30 @@ import "./sass/main.scss";
 import App from "./App";
 // Animated Website
 import AnimatedWebsite from "./components/animated_website/animatedWebsite";
-// Bootstrap Template
-import BootstrapTemplate from "./components/bootstrap_template/bootstrapTemplate";
 // Bootstrap Portfolio
 import BootstrapPortfolio from "./components/bootstrap_portfolio/bootstrapPortfolio";
 // Contact Form
 import ContactForm from "./components/contact_form/contactForm";
-// SVG Bubbles example
-import SVGBubbles_example from "./components/SVG_section_dividers_1/SVGBubbles_example";
-// SVG examples
-import SVG_example from "./components/SVG_section_divider_2/SVG_example";
 // Weather API
 import WeatherAPI from "./components/weather_api/weatherAPI";
 // Book List
 import BookList from "./components/book_list/bookList";
 // Hangman
 import Hangman from "./components/hangman/App";
+// Minesweeper
+import Minesweeper from "./components/minesweeper/minesweeper"
+// Pixel Art
+import PixelArt from "./components/PixelArt/PixelArt";
+// Snake game
+import SnakeGame from "./components/SnakeGame/SnakeGame";
+// Clocks
+import Clocks from "./App_components/SectionOne/Clocks"
+// DarkThematics
+import DarkThematics from "./App_components/SectionOne/DarkThematics"
+// LightThematics
+import LightThematics from "./App_components/SectionOne/LightThematics"
+// OtherProjects
+import OtherProjects from "./App_components/SectionOne/OtherProjects"
 // Amazon App
 import AmazonApp from "./AmazonApp/AmazonApp";
 import reducer, { initialState } from "./AmazonApp/reducer";
@@ -41,14 +49,18 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/animatedWebsite" component={AnimatedWebsite} />
-      <Route path="/bootstrapTemplate" component={BootstrapTemplate} />
       <Route path="/bootstrapPortfolio" component={BootstrapPortfolio} />
       <Route path="/contactForm" component={ContactForm} />
-      <Route path="/SVGBubbles_example" component={SVGBubbles_example} />
-      <Route path="/SVG_example" component={SVG_example} />
       <Route path="/weatherAPI" component={WeatherAPI} />
       <Route path="/bookList" component={BookList} />
       <Route path="/hangman" component={Hangman} />
+      <Route path="/minesweeper" component={Minesweeper} />
+      <Route path="/pixelArt" component={PixelArt} />
+      <Route path="/snakeGame" component={SnakeGame} />
+      <Route path="/clocks" component={Clocks} />
+      <Route path="/darkThematics" component={DarkThematics} />
+      <Route path="/lightThematics" component={LightThematics} />
+      <Route path="/otherProjects" component={OtherProjects} />
       <Route path="/facebookMessengerApp" component={FacebookMessengerApp} />
       <Route path="/socialMediaApp" component={SocialMediaApp} />
       <StateProvider initialState={initialState} reducer={reducer}>

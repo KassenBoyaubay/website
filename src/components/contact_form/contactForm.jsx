@@ -6,7 +6,7 @@ const ContactForm = () => {
         <div className="contactForm">
             <section id="contact-btn">
                 <h1>If You Have Any Project In Your Mind ?</h1>
-                <a href="#">Contact Me</a>
+                <span>Contact Me</span>
             </section>
 
             <section id="contact-form">
@@ -27,10 +27,10 @@ const ContactForm = () => {
                             <input type="email" placeholder="Example@gmail.com" />
                         </div>
                         <div className="social-icons">
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                            <a href="#"><i className="fab fa-youtube"></i></a>
+                            <span><i className="fab fa-facebook-f"></i></span>
+                            <span><i className="fab fa-twitter"></i></span>
+                            <span><i className="fab fa-instagram"></i></span>
+                            <span><i className="fab fa-youtube"></i></span>
                         </div>
                     </div>
                     {/* right */}

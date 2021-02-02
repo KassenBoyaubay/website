@@ -3,7 +3,7 @@ import "./minesweeper.scss";
 import { useEffect } from "react";
 
 const Minesweeper = () => {
-  const [bombAmount, setBombAmount] = useState(20);
+  const [bombAmount] = useState(20);
   const [flags, setFlags] = useState(0);
   const [total, setTotal] = useState([]);
   const [squareClass, setSquareClass] = useState([]);
@@ -11,7 +11,7 @@ const Minesweeper = () => {
   const [result, setResult] = useState("");
   const [isGameOver, setIsGameOver] = useState(false);
   const [yep, setYep] = useState(-1);
-  const [width, setWidth] = useState(10);
+  const [width] = useState(10);
 
   var squareClassLoop = [];
   var squareContentLoop = [];

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import logo from "./logo.svg";
 
@@ -6,7 +6,7 @@ const Sidebar = () => {
   const [show, setShow] = useState("");
 
   const toggleBar = () => {
-    if (show == "show-sidebar") setShow("");
+    if (show === "show-sidebar") setShow("");
     else setShow("show-sidebar");
   };
 
@@ -24,16 +24,16 @@ const Sidebar = () => {
         </div>
         <ul className="links">
           <li>
-            <a href="index.html">home</a>
+            <a href="#">home</a>
           </li>
           <li>
-            <a href="about.html">about</a>
+            <a href="#">about</a>
           </li>
           <li>
-            <a href="projects.html">projects</a>
+            <a href="#">projects</a>
           </li>
           <li>
-            <a href="contact.html">contact</a>
+            <a href="#">contact</a>
           </li>
         </ul>
         <ul className="social-icons">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 
 import bgn from "./hero-bcg.jpeg";
 
@@ -23,21 +22,21 @@ const Tabs2 = () => {
           <article className="about">
             <div className="btn-container">
               <button
-                className={`tab-btn ${active == 1 ? "active" : ""}`}
+                className={`tab-btn ${active === 1 ? "active" : ""}`}
                 data-id="history"
                 onClick={() => setActive(1)}
               >
                 history
               </button>
               <button
-                className={`tab-btn ${active == 2 ? "active" : ""}`}
+                className={`tab-btn ${active === 2 ? "active" : ""}`}
                 data-id="vision"
                 onClick={() => setActive(2)}
               >
                 vision
               </button>
               <button
-                className={`tab-btn ${active == 3 ? "active" : ""}`}
+                className={`tab-btn ${active === 3 ? "active" : ""}`}
                 data-id="goals"
                 onClick={() => setActive(3)}
               >
@@ -46,7 +45,7 @@ const Tabs2 = () => {
             </div>
             <div className="about-content">
               <div
-                className={`content ${active == 1 ? "active" : ""}`}
+                className={`content ${active === 1 ? "active" : ""}`}
                 id="history"
               >
                 <h4>history</h4>
@@ -62,7 +61,7 @@ const Tabs2 = () => {
                 </p>
               </div>
               <div
-                className={`content ${active == 2 ? "active" : ""}`}
+                className={`content ${active === 2 ? "active" : ""}`}
                 id="vision"
               >
                 <h4>vision</h4>
@@ -84,7 +83,7 @@ const Tabs2 = () => {
                 </ul>
               </div>
               <div
-                className={`content ${active == 3 ? "active" : ""}`}
+                className={`content ${active === 3 ? "active" : ""}`}
                 id="goals"
               >
                 <h4>goals</h4>

@@ -176,13 +176,12 @@ const Book = (props) => {
       <td>{props.author}</td>
       <td>{props.isbn}</td>
       <td>
-        <a
-          href="#"
+        <button
           className="btn btn-danger btn-sm delete"
           onClick={(e) => props.deleteBook(e, props.id, props.isbn)}
         >
           X
-        </a>
+        </button>
       </td>
     </tr>
   );

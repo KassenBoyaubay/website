@@ -39,6 +39,7 @@ function Login() {
       <Link to="/amazonApp">
         <img
           className="Am__login__logo"
+          alt=""
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
         />
       </Link>

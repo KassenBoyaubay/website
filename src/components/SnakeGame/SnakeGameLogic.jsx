@@ -61,6 +61,9 @@ const SnakeGameLogic = () => {
       case 39:
         setDirection('RIGHT');
         break;
+      default:
+        console.error('error w/ onKeyDown')
+        break;
     }
   }
 
@@ -81,6 +84,9 @@ const SnakeGameLogic = () => {
       case 'UP':
         head = [head[0], head[1] - 2];
         break;
+      default:
+        console.error('error w/ moveSnake')
+        break;
     }
     dots.push(head);
     dots.shift();
@@ -99,7 +105,7 @@ const SnakeGameLogic = () => {
     let head = snake[snake.length - 1];
     snake.pop();
     snake.forEach(dot => {
-      if (head[0] == dot[0] && head[1] == dot[1]) {
+      if (head[0] === dot[0] && head[1] === dot[1]) {
         onGameOver();
       }
     })
@@ -108,7 +114,7 @@ const SnakeGameLogic = () => {
   const checkIfEat = () => {
     let head = snakeDots[snakeDots.length - 1];
     let foods = food;
-    if (head[0] == foods[0] && head[1] == foods[1]) {
+    if (head[0] === foods[0] && head[1] === foods[1]) {
       setFood(getRandomCoordinates())
       enlargeSnake();
       increaseSpeed();

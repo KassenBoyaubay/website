@@ -25,7 +25,7 @@ const FlexGallery = () => {
                 </p>
                 <button type="button">Know More</button>
               </div>
-              <img src={item.img} />
+              <img src={item.img} alt="" />
             </div>
           );
         })}

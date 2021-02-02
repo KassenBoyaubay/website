@@ -43,7 +43,7 @@ const ImageLightbox = () => {
       >
         <img
           src={overlayImage}
-          alt="Lightbox image"
+          alt="Lightbox"
           title="Click anywhere to close"
           id="lightbox-image"
         />
@@ -55,14 +55,12 @@ const ImageLightbox = () => {
 const Image = ({ image, imageClick }) => {
   return (
     <li>
-      <a href="#" alt="Gallery image">
-        <img
-          src={image}
-          data-lightbox={image}
-          alt="Gallery image"
-          onClick={(e) => imageClick(e)}
-        />
-      </a>
+      <img
+        src={image}
+        data-lightbox={image}
+        alt="Gallery"
+        onClick={(e) => imageClick(e)}
+      />
     </li>
   );
 };

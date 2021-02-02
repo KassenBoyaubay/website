@@ -59,7 +59,7 @@ const CountdownTimer = () => {
     return () => {
       if (finish) clearTimeout(countdown);
     };
-  }, [futureTime, values]);
+  }, [futureTime, values, finish]);
 
   function getRemaindingTime() {
     setFinish(false);

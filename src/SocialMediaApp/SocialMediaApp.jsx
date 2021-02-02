@@ -2,7 +2,7 @@
 // https://github.com/hidjou/classsed-react-firebase-client/tree/master/src
 
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import styles from "./SocialMediaApp.module.scss"
 import jwtDecode from 'jwt-decode';
 // Redux

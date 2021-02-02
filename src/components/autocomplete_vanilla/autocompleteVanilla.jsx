@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./autocompleteVanilla.scss";
-import { useEffect } from "react";
 
 const AutocompleteVanilla = () => {
   const countryList = [
@@ -20,6 +19,7 @@ const AutocompleteVanilla = () => {
     "China",
     "Korea",
     "Japan",
+    "Uranus",
   ];
 
   const [value, setValue] = useState("");
@@ -33,7 +33,7 @@ const AutocompleteVanilla = () => {
   };
 
   const keyDown = (e) => {
-    if (e.keyCode == "13") {
+    if (e.keyCode === "13") {
       e.preventDefault();
     }
   };
@@ -60,6 +60,8 @@ const AutocompleteVanilla = () => {
           setHighlighted(highlighted + 1);
         } else setHighlighted(0);
         break;
+      default:
+        break;
     }
   }
 
@@ -69,7 +71,7 @@ const AutocompleteVanilla = () => {
       (item) => item.includes(str) || item.toLowerCase().includes(str)
     );
     setList(check);
-    if (check.length != cl.length) setShow(true);
+    if (check.length !== cl.length) setShow(true);
   }
 
   const displayAll = (e) => {
@@ -79,7 +81,7 @@ const AutocompleteVanilla = () => {
         item.includes(e.currentTarget.value) ||
         item.toLowerCase().includes(e.currentTarget.value)
     );
-    if (check.length == cl.length) {
+    if (check.length === cl.length) {
       setShow(true);
       changeHighlight(e);
     }
@@ -87,9 +89,9 @@ const AutocompleteVanilla = () => {
 
   const remove = (e) => {
     if (
-      e.target.id != "country" &&
-      e.target.id != "autocomplete-results" &&
-      e.target.parentElement.id != "autocomplete-results"
+      e.target.id !== "country" &&
+      e.target.id !== "autocomplete-results" &&
+      e.target.parentElement.id !== "autocomplete-results"
     )
       setShow(false);
   };
@@ -116,12 +118,12 @@ const AutocompleteVanilla = () => {
           id="autocomplete-results"
           className={show ? "visible" : ""}
           style={
-            list.length == 0 ? { border: "0" } : { border: "1px solid #e2e8ee" }
+            list.length === 0 ? { border: "0" } : { border: "1px solid #e2e8ee" }
           }
         >
           {list.map((item, i) => (
             <li
-              className={`result ${i == highlighted ? "highlighted" : ""}`}
+              className={`result ${i === highlighted ? "highlighted" : ""}`}
               onClick={() => setHighlighted(i)}
               onDoubleClick={() => {
                 setValue(list[highlighted]);

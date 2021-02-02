@@ -19,13 +19,13 @@ const Allquestions = [
 ];
 
 const Questions = () => {
-  const [questions, setQuestions] = useState(Allquestions);
+  const [questions] = useState(Allquestions);
   const [show, setShow] = useState(Array(Allquestions.length).fill(""));
 
   const open = (id) => {
     setShow(
       show.map((item, i) =>
-        i == id ? (item != "show-text" ? "show-text" : "") : ""
+        i === id ? (item !== "show-text" ? "show-text" : "") : ""
       )
     );
   };

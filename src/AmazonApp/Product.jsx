@@ -3,7 +3,7 @@ import "./Product.scss";
 import { useStateValue } from "./StateProvider";
 
 function Product({ title, image, price, rating, id }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ }, dispatch] = useStateValue();
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -28,7 +28,7 @@ function Product({ title, image, price, rating, id }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>🌟</p>
+              <p><span role="img">🌟</span></p>
             ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
 import "./AmazonApp.scss";
 import Checkout from "./Checkout";
 import Header from "./Header";
@@ -39,7 +39,7 @@ const promise = loadStripe(
 );
 
 const AmazonApp = () => {
-  const [{}, dispatch] = useStateValue();
+  const [{ }, dispatch] = useStateValue();
 
   useEffect(() => {
     // will only run once when the app component loads...

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import img1 from "./images/item-1.jpeg";
 import img2 from "./images/item-2.jpeg";
@@ -96,7 +96,7 @@ const Allmenu = [
 
 const Menu = () => {
   const [menu, setMenu] = useState(Allmenu);
-  const [categories, setCategories] = useState(
+  const [categories] = useState(
     Allmenu.reduce(
       function (values, item) {
         if (!values.includes(item.category)) {

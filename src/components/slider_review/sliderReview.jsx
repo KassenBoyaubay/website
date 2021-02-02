@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import data from "./data.js";
 
 const SliderReview = () => {
-  const [people, setPeople] = useState(data);
+  const [people] = useState(data);
   const [position, setPosition] = useState(
     Array(data.length)
       .fill("next")
@@ -11,34 +11,34 @@ const SliderReview = () => {
         return i === 0
           ? (item = "active")
           : data.length <= 1
-          ? (item = "active")
-          : (item = item);
+            ? (item = "active")
+            : (item);
       })
   );
   const [active, setActive] = useState(0);
 
   const startSlider = (type) => {
     if (data.length >= 1) {
-      if (type == "prev") {
+      if (type === "prev") {
         setPosition(
           position.map((item, i) => {
-            return i == active
+            return i === active
               ? (item = "next")
-              : (i < position.length - 1 && i + 1 == active) ||
-                (i == position.length - 1 && 0 == active)
-              ? (item = "active")
-              : (item = item);
+              : (i < position.length - 1 && i + 1 === active) ||
+                (i === position.length - 1 && 0 === active)
+                ? (item = "active")
+                : (item = item);
           })
         );
       } else {
         setPosition(
           position.map((item, i) => {
-            return i == active
+            return i === active
               ? (item = "next")
-              : (i > 0 && i - 1 == active) ||
-                (i == 0 && position.length - 1 == active)
-              ? (item = "active")
-              : (item = item);
+              : (i > 0 && i - 1 === active) ||
+                (i === 0 && position.length - 1 === active)
+                ? (item = "active")
+                : (item);
           })
         );
       }
@@ -48,7 +48,7 @@ const SliderReview = () => {
   useEffect(() => {
     let k;
     position.forEach((item, i) => {
-      if (item == "active") k = i;
+      if (item === "active") k = i;
     });
     setActive(k);
   }, [position]);

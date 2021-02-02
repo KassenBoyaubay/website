@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./tabs1.scss";
-import { useEffect } from "react";
 
 const Tabs1 = () => {
   const tabs = [
@@ -85,15 +84,15 @@ const Tabs1 = () => {
     },
   ];
 
-  const [tabIndex, setTabIndex] = useState(Array(tabs.length).fill(false));
+  const [tabIndex, setTabIndex] = useState([true, ...Array(tabs.length).fill(false)].slice(0, -1));
 
   const tabClick = (e) => {
     e.preventDefault();
-    if (e.target.className.indexOf("active") == -1) {
+    if (e.target.className.indexOf("active") === -1) {
       let ntabs = Array(tabs.length).fill(false);
       setTabIndex(
         ntabs.map((item, i) =>
-          e.target.className.indexOf(`${i}`) != -1
+          e.target.className.indexOf(`${i}`) !== -1
             ? (item = true)
             : (item = false)
         )
@@ -101,22 +100,18 @@ const Tabs1 = () => {
     }
   };
 
-  useEffect(() => {
-    setTabIndex([true, ...tabIndex].slice(0, -1));
-  }, []);
-
   return (
     <div className="Tabs1">
       <div className="tabs-container">
         <ul className="tabs">
           {tabs.map((item, i) => (
             <li>
-              <a
+              <span
                 className={`${i} ${tabIndex[i] ? "active" : ""}`}
                 onClick={(e) => tabClick(e)}
               >
                 {item.name}
-              </a>
+              </span>
             </li>
           ))}
         </ul>

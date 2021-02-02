@@ -12,9 +12,9 @@ const StatsCard = () => {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ea
               natus nulla nostrum{" "}
             </p>
-            <a href="#" className="info-button">
+            <button className="info-button">
               Read Our Cases
-            </a>
+            </button>
           </div>
           <div className="info-right">
             <div className="stat-group">

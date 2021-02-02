@@ -12,13 +12,13 @@ const SignForm = () => {
           <form action="#">
             <h1>Create Account</h1>
             <div className="social-container">
-              <a href="#" className="social">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="social">
+              <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" className="social">
                 <i className="fab fa-google-plus-g"></i>
               </a>
-              <a href="#" className="social">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -33,20 +33,20 @@ const SignForm = () => {
           <form action="#">
             <h1>Sign in</h1>
             <div className="social-container">
-              <a href="#" className="social">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="social">
+              <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" className="social">
                 <i className="fab fa-google-plus-g"></i>
               </a>
-              <a href="#" className="social">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
             <span>or use your account</span>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <a href="#">Forgot your password?</a>
+            <a href="https://www.google.com">Forgot your password?</a>
             <button>Sign In</button>
           </form>
         </div>
