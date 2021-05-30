@@ -81,6 +81,7 @@ function Navbar({ classes }) {
             <AppBar color={darkTheme ? "secondary" : "primary"}>
                 <Toolbar>
                     {/* Menu Icon button */}
+                    { /*
                     <Tooltip
                         aria-label="side menu"
                         placement="bottom"
@@ -93,12 +94,14 @@ function Navbar({ classes }) {
                             </span>
                         </IconButton>
                     </Tooltip>
+                    */}
                     {/* Nav header */}
                     <Typography variant="h6" className={classes.grow}>
                         <Text tid={"nav_title"} />
                         {/* Main Page */}
                     </Typography>
                     {/* Search */}
+                    { /*
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
@@ -115,6 +118,7 @@ function Navbar({ classes }) {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </div>
+                    */}
                     {/* Language Select */}
                     <LanguageSelect />
                     {/* Light/dark mode */}

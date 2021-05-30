@@ -18,6 +18,7 @@ const styles = {
         fontFamily: '"Great Vibes Pro", cursive',
         fontWeight: 'bold',
         textTransform: 'capitalize',
+        textAlign: "center"
     },
     h3Dark: {
         fontSize: "3rem",
@@ -25,6 +26,7 @@ const styles = {
         fontFamily: '"Great Vibes Pro", cursive',
         fontWeight: 'bold',
         textTransform: 'capitalize',
+        textAlign: "center"
     }
 }
 
